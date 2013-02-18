@@ -1,0 +1,1281 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{380B778C-A266-43A5-9176-41C6F7F6B07C}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Zkzx.WS</RootNamespace>
+    <AssemblyName>Zkzx.WS</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <UseIISExpress>false</UseIISExpress>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <FilesToIncludeForPublish>AllFilesInProjectFolder</FilesToIncludeForPublish>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Feng.Base">
+      <HintPath>..\Reference\Feng.Base.dll</HintPath>
+    </Reference>
+    <Reference Include="Feng.Gps, Version=2.3.0.0, Culture=neutral, PublicKeyToken=e562c5de18d0ba3c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Reference\Feng.Gps.dll</HintPath>
+    </Reference>
+    <Reference Include="Feng.Model">
+      <HintPath>..\Reference\Feng.Model.dll</HintPath>
+    </Reference>
+    <Reference Include="Feng.NH, Version=2.3.0.0, Culture=neutral, PublicKeyToken=e562c5de18d0ba3c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Reference\Feng.NH.dll</HintPath>
+    </Reference>
+    <Reference Include="Feng.Security, Version=2.3.0.0, Culture=neutral, PublicKeyToken=e562c5de18d0ba3c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Reference\Feng.Security.dll</HintPath>
+    </Reference>
+    <Reference Include="Feng.Server">
+      <HintPath>..\Reference\Feng.Server.dll</HintPath>
+    </Reference>
+    <Reference Include="Feng.Windows, Version=2.3.0.0, Culture=neutral, PublicKeyToken=e562c5de18d0ba3c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Reference\Feng.Windows.dll</HintPath>
+    </Reference>
+    <Reference Include="Feng.Windows.Application, Version=2.3.0.0, Culture=neutral, PublicKeyToken=e562c5de18d0ba3c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Reference\Feng.Windows.Application.dll</HintPath>
+    </Reference>
+    <Reference Include="Feng.Windows.Controller, Version=2.3.0.0, Culture=neutral, PublicKeyToken=e562c5de18d0ba3c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Reference\Feng.Windows.Controller.dll</HintPath>
+    </Reference>
+    <Reference Include="Feng.Windows.Model, Version=2.3.0.0, Culture=neutral, PublicKeyToken=e562c5de18d0ba3c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Reference\Feng.Windows.Model.dll</HintPath>
+    </Reference>
+    <Reference Include="log4net, Version=1.2.10.0, Culture=neutral, PublicKeyToken=1b44e1d426115821, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Reference\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.Practices.ServiceLocation, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Reference\Microsoft.Practices.ServiceLocation.dll</HintPath>
+    </Reference>
+    <Reference Include="NHibernate, Version=3.3.1.4000, Culture=neutral, PublicKeyToken=aa95f207798dfdb4, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Reference\NHibernate.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Data.Services" />
+    <Reference Include="System.Data.Services.Client" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.ServiceModel.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="Zkzx.Model">
+      <HintPath>..\Reference\Zkzx.Model.dll</HintPath>
+    </Reference>
+    <Reference Include="Zkzx.Model.Dao">
+      <HintPath>..\Reference\Zkzx.Model.Dao.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Generated\DSRS_AD_Action.svc" />
+    <Content Include="Generated\DSRS_AD_AlertRule.svc" />
+    <Content Include="Generated\DSRS_AD_Client.svc" />
+    <Content Include="Generated\DSRS_AD_CommandBinding.svc" />
+    <Content Include="Generated\DSRS_AD_EntityBuffer.svc" />
+    <Content Include="Generated\DSRS_AD_EventProcess.svc" />
+    <Content Include="Generated\DSRS_AD_Form.svc" />
+    <Content Include="Generated\DSRS_AD_Grid.svc" />
+    <Content Include="Generated\DSRS_AD_Grid_Cell.svc" />
+    <Content Include="Generated\DSRS_AD_Grid_Column.svc" />
+    <Content Include="Generated\DSRS_AD_Grid_Column_Warning.svc" />
+    <Content Include="Generated\DSRS_AD_Grid_Filter.svc" />
+    <Content Include="Generated\DSRS_AD_Grid_Group.svc" />
+    <Content Include="Generated\DSRS_AD_Grid_Related.svc" />
+    <Content Include="Generated\DSRS_AD_Grid_Related_Address.svc" />
+    <Content Include="Generated\DSRS_AD_Grid_Row.svc" />
+    <Content Include="Generated\DSRS_AD_Menu.svc" />
+    <Content Include="Generated\DSRS_AD_NameValueMapping.svc" />
+    <Content Include="Generated\DSRS_AD_Org.svc" />
+    <Content Include="Generated\DSRS_AD_Param_Creator.svc" />
+    <Content Include="Generated\DSRS_AD_Plugin.svc" />
+    <Content Include="Generated\DSRS_AD_Process.svc" />
+    <Content Include="Generated\DSRS_AD_Report.svc" />
+    <Content Include="Generated\DSRS_AD_Report_Data.svc" />
+    <Content Include="Generated\DSRS_AD_Resource.svc" />
+    <Content Include="Generated\DSRS_AD_Role.svc" />
+    <Content Include="Generated\DSRS_AD_Search_Custom.svc" />
+    <Content Include="Generated\DSRS_AD_SimpleParam.svc" />
+    <Content Include="Generated\DSRS_AD_Task.svc" />
+    <Content Include="Generated\DSRS_AD_Web_Service.svc" />
+    <Content Include="Generated\DSRS_AD_Window.svc" />
+    <Content Include="Generated\DSRS_AD_Window_Menu.svc" />
+    <Content Include="Generated\DSRS_AD_Window_Select.svc" />
+    <Content Include="Generated\DSRS_AD_Window_Tab.svc" />
+    <Content Include="Generated\DSRS_AD_Window_Tab_Event.svc" />
+    <Content Include="Generated\DSRS_SD_Alert.svc" />
+    <Content Include="Generated\DSRS_SD_AuditLog.svc" />
+    <Content Include="Generated\DSRS_SD_Track.svc" />
+    <Content Include="Generated\DSRS_SD_User_Configuration.svc" />
+    <Content Include="Generated\DSRS_Test_Tab窗体_主.svc" />
+    <Content Include="Generated\DSRS_WS_AD_Action.svc" />
+    <Content Include="Generated\DSRS_WS_AD_AlertRule.svc" />
+    <Content Include="Generated\DSRS_WS_AD_Client.svc" />
+    <Content Include="Generated\DSRS_WS_AD_CommandBinding.svc" />
+    <Content Include="Generated\DSRS_WS_AD_EntityBuffer.svc" />
+    <Content Include="Generated\DSRS_WS_AD_EventProcess.svc" />
+    <Content Include="Generated\DSRS_WS_AD_Form.svc" />
+    <Content Include="Generated\DSRS_WS_AD_Grid.svc" />
+    <Content Include="Generated\DSRS_WS_AD_Grid_Cell.svc" />
+    <Content Include="Generated\DSRS_WS_AD_Grid_Column.svc" />
+    <Content Include="Generated\DSRS_WS_AD_Grid_Column_Warning.svc" />
+    <Content Include="Generated\DSRS_WS_AD_Grid_Filter.svc" />
+    <Content Include="Generated\DSRS_WS_AD_Grid_Group.svc" />
+    <Content Include="Generated\DSRS_WS_AD_Grid_Related.svc" />
+    <Content Include="Generated\DSRS_WS_AD_Grid_Related_Address.svc" />
+    <Content Include="Generated\DSRS_WS_AD_Grid_Row.svc" />
+    <Content Include="Generated\DSRS_WS_AD_Menu.svc" />
+    <Content Include="Generated\DSRS_WS_AD_NameValueMapping.svc" />
+    <Content Include="Generated\DSRS_WS_AD_Org.svc" />
+    <Content Include="Generated\DSRS_WS_AD_Param_Creator.svc" />
+    <Content Include="Generated\DSRS_WS_AD_Plugin.svc" />
+    <Content Include="Generated\DSRS_WS_AD_Process.svc" />
+    <Content Include="Generated\DSRS_WS_AD_Report.svc" />
+    <Content Include="Generated\DSRS_WS_AD_Report_Data.svc" />
+    <Content Include="Generated\DSRS_WS_AD_Resource.svc" />
+    <Content Include="Generated\DSRS_WS_AD_Role.svc" />
+    <Content Include="Generated\DSRS_WS_AD_Search_Custom.svc" />
+    <Content Include="Generated\DSRS_WS_AD_SimpleParam.svc" />
+    <Content Include="Generated\DSRS_WS_AD_Task.svc" />
+    <Content Include="Generated\DSRS_WS_AD_Web_Service.svc" />
+    <Content Include="Generated\DSRS_WS_AD_Window.svc" />
+    <Content Include="Generated\DSRS_WS_AD_Window_Menu.svc" />
+    <Content Include="Generated\DSRS_WS_AD_Window_Select.svc" />
+    <Content Include="Generated\DSRS_WS_AD_Window_Tab.svc" />
+    <Content Include="Generated\DSRS_WS_AD_Window_Tab_Event.svc" />
+    <Content Include="Generated\DSRS_WS_SD_Alert.svc" />
+    <Content Include="Generated\DSRS_WS_SD_AuditLog.svc" />
+    <Content Include="Generated\DSRS_WS_SD_Track.svc" />
+    <Content Include="Generated\DSRS_WS_SD_User_Configuration.svc" />
+    <Content Include="Generated\DSRS_专家级调度_一级动态优化_动态出口箱带货_任务集合top.svc" />
+    <Content Include="Generated\DSRS_专家级调度_一级动态优化_动态套箱_任务集合top.svc" />
+    <Content Include="Generated\DSRS_专家级调度_一级动态优化_动态小箱配对_任务集合bottom.svc" />
+    <Content Include="Generated\DSRS_专家级调度_一级动态优化_动态小箱配对_任务集合top.svc" />
+    <Content Include="Generated\DSRS_专家级调度_一级动态优化_动态进口箱带货_任务集合top.svc" />
+    <Content Include="Generated\DSRS_专家级调度_一级静态优化_小箱配对_任务集合bottom.svc" />
+    <Content Include="Generated\DSRS_专家级调度_一级静态优化_小箱配对_任务集合top.svc" />
+    <Content Include="Generated\DSRS_专家级调度_一级静态优化_紧急任务下达.svc" />
+    <Content Include="Generated\DSRS_专家级调度_一级静态优化_静态出口箱带货_任务集合bottom.svc" />
+    <Content Include="Generated\DSRS_专家级调度_一级静态优化_静态出口箱带货_任务集合top.svc" />
+    <Content Include="Generated\DSRS_专家级调度_一级静态优化_静态套箱_任务集合bottom.svc" />
+    <Content Include="Generated\DSRS_专家级调度_一级静态优化_静态套箱_任务集合top.svc" />
+    <Content Include="Generated\DSRS_专家级调度_一级静态优化_静态进口箱带货_任务集合bottom.svc" />
+    <Content Include="Generated\DSRS_专家级调度_一级静态优化_静态进口箱带货_任务集合top.svc" />
+    <Content Include="Generated\DSRS_专家级调度_静态任务下达_已优化过的任务集合.svc" />
+    <Content Include="Generated\DSRS_专家级调度_静态任务下达_未优化过的任务集合.svc" />
+    <Content Include="Generated\DSRS_专家级调度主界面_原始.svc" />
+    <Content Include="Generated\DSRS_专家级调度主界面_已下达.svc" />
+    <Content Include="Generated\DSRS_专家级调度主界面_未分派.svc" />
+    <Content Include="Generated\DSRS_专家级调度主界面_运行中.svc" />
+    <Content Include="Generated\DSRS_任务备案_任务正式备案.svc" />
+    <Content Include="Generated\DSRS_任务备案_任务正式备案二.svc" />
+    <Content Include="Generated\DSRS_任务备案_任务预备案.svc" />
+    <Content Include="Generated\DSRS_任务备案_进口箱批量任务录入_显示区.svc" />
+    <Content Include="Generated\DSRS_任务备案_进口箱批量任务录入_暂存区.svc" />
+    <Content Include="Generated\DSRS_任务备案_进口箱批量任务确认_显示区.svc" />
+    <Content Include="Generated\DSRS_任务备案_进口箱批量任务确认_暂存区.svc" />
+    <Content Include="Generated\DSRS_参数备案_人员单位.svc" />
+    <Content Include="Generated\DSRS_参数备案_施验封地.svc" />
+    <Content Include="Generated\DSRS_参数备案_车辆.svc" />
+    <Content Include="Generated\DSRS_实时监控_车辆作业_任务监控区.svc" />
+    <Content Include="Generated\DSRS_实时监控_车辆作业_作业开始结束.svc" />
+    <Content Include="Generated\DSRS_实时监控_车辆作业_作业监控区.svc" />
+    <Content Include="Generated\DSRS_实时监控_车辆作业_作业退回申请.svc" />
+    <Content Include="Generated\DSRS_实时监控_车辆作业_动态任务追加.svc" />
+    <Content Include="Generated\DSRS_实时监控_车辆作业_单个作业监控详情_任务.svc" />
+    <Content Include="Generated\DSRS_实时监控_车辆作业_单个作业监控详情_任务2.svc" />
+    <Content Include="Generated\DSRS_实时监控_车辆作业_异常处理.svc" />
+    <Content Include="Generated\DSRS_实时监控_车辆作业_承运时间要求详情_任务.svc" />
+    <Content Include="Generated\DSRS_实时监控_车辆作业_电子作业单.svc" />
+    <Content Include="Generated\DSRS_实时监控_车辆作业_电子作业单_作业流程.svc" />
+    <Content Include="Generated\DSRS_实时监控_车辆作业_监控级调度主界面_未开始.svc" />
+    <Content Include="Generated\DSRS_实时监控_车辆作业_监控级调度主界面_运行中.svc" />
+    <Content Include="Generated\DSRS_实时监控_车辆作业_监控结束.svc" />
+    <Content Include="Generated\DSRS_实时监控_车辆作业_监控结束_任务.svc" />
+    <Content Include="Generated\DSRS_实时监控_车辆作业_车载ID当前使用情况.svc" />
+    <Content Include="Generated\DSRS_实时监控_车辆作业_车辆详细信息.svc" />
+    <Content Include="Generated\DSRS_查询统计_备案确认情况查询.svc" />
+    <Content Include="Generated\DSRS_查询统计_预录入发送后情况查询.svc" />
+    <Content Include="Generated\DSRS_管理_专家任务管理.svc" />
+    <Content Include="Generated\DSRS_管理_任务管理.svc" />
+    <Content Include="Generated\DSRS_网上查询_任务明细.svc" />
+    <Content Include="Generated\DSRS_网上查询_任务查询.svc" />
+    <Content Include="Generated\DSRS_车队级调度_主界面_新任务集合.svc" />
+    <Content Include="Generated\DSRS_车队级调度_主界面_未结束.svc" />
+    <Content Include="Generated\DSRS_车队级调度_车辆报停启用.svc" />
+    <Content Include="Generated\DSRS_车队级调度_转关箱预排车_待排转关箱任务.svc" />
+    <Content Include="Generated\DSRS_车队级调度_转关箱预排车_暂存计划区.svc" />
+    <Content Include="Generated\DSRS_车队级调度_转关箱预排车_监管车辆及作业状况.svc" />
+    <Content Include="Generated\DSRS_车队级调度_静态任务下达_单车后续作业计划_专家任务.svc" />
+    <Content Include="Generated\DSRS_车队级调度_静态任务下达_待命车辆_单车单任务.svc" />
+    <Content Include="Generated\DSRS_车队级调度_静态任务下达_待命车辆_单车多任务.svc" />
+    <Content Include="Generated\DSRS_车队级调度_静态任务下达_待排任务.svc" />
+    <Content Include="Generated\DSS_ActionInfo.svc" />
+    <Content Include="Generated\DSS_AlertInfo.svc" />
+    <Content Include="Generated\DSS_AlertRuleInfo.svc" />
+    <Content Include="Generated\DSS_AuditLogRecord.svc" />
+    <Content Include="Generated\DSS_ClientInfo.svc" />
+    <Content Include="Generated\DSS_CommandBindingInfo.svc" />
+    <Content Include="Generated\DSS_CustomSearchInfo.svc" />
+    <Content Include="Generated\DSS_EntityBufferInfo.svc" />
+    <Content Include="Generated\DSS_EventProcessInfo.svc" />
+    <Content Include="Generated\DSS_FormInfo.svc" />
+    <Content Include="Generated\DSS_GridCellInfo.svc" />
+    <Content Include="Generated\DSS_GridColumnInfo.svc" />
+    <Content Include="Generated\DSS_GridColumnWarningInfo.svc" />
+    <Content Include="Generated\DSS_GridFilterInfo.svc" />
+    <Content Include="Generated\DSS_GridGroupInfo.svc" />
+    <Content Include="Generated\DSS_GridInfo.svc" />
+    <Content Include="Generated\DSS_GridRelatedAddressInfo.svc" />
+    <Content Include="Generated\DSS_GridRelatedInfo.svc" />
+    <Content Include="Generated\DSS_GridRowInfo.svc" />
+    <Content Include="Generated\DSS_MenuInfo.svc" />
+    <Content Include="Generated\DSS_NameValueMappingInfo.svc" />
+    <Content Include="Generated\DSS_OrganizationInfo.svc" />
+    <Content Include="Generated\DSS_ParamCreatorInfo.svc" />
+    <Content Include="Generated\DSS_PluginInfo.svc" />
+    <Content Include="Generated\DSS_ProcessInfo.svc" />
+    <Content Include="Generated\DSS_ReportDataInfo.svc" />
+    <Content Include="Generated\DSS_ReportInfo.svc" />
+    <Content Include="Generated\DSS_ResourceInfo.svc" />
+    <Content Include="Generated\DSS_RoleInfo.svc" />
+    <Content Include="Generated\DSS_SimpleParamInfo.svc" />
+    <Content Include="Generated\DSS_TaskInfo.svc" />
+    <Content Include="Generated\DSS_Track.svc" />
+    <Content Include="Generated\DSS_UserConfigurationInfo.svc" />
+    <Content Include="Generated\DSS_WebServiceInfo.svc" />
+    <Content Include="Generated\DSS_WindowInfo.svc" />
+    <Content Include="Generated\DSS_WindowMenuInfo.svc" />
+    <Content Include="Generated\DSS_WindowSelectInfo.svc" />
+    <Content Include="Generated\DSS_WindowTabEventInfo.svc" />
+    <Content Include="Generated\DSS_WindowTabInfo.svc" />
+    <Content Include="Global.asax" />
+    <Content Include="Login.aspx" />
+    <Content Include="Membership\MembershipManage.aspx" />
+    <Content Include="Service\DataSearchViewService.svc" />
+    <Content Include="Service\EntityDataService.svc" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="WebLogin.asmx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Generated\DSRSI_AD_Action.cs" />
+    <Compile Include="Generated\DSRSI_AD_AlertRule.cs" />
+    <Compile Include="Generated\DSRSI_AD_Client.cs" />
+    <Compile Include="Generated\DSRSI_AD_CommandBinding.cs" />
+    <Compile Include="Generated\DSRSI_AD_EntityBuffer.cs" />
+    <Compile Include="Generated\DSRSI_AD_EventProcess.cs" />
+    <Compile Include="Generated\DSRSI_AD_Form.cs" />
+    <Compile Include="Generated\DSRSI_AD_Grid.cs" />
+    <Compile Include="Generated\DSRSI_AD_Grid_Cell.cs" />
+    <Compile Include="Generated\DSRSI_AD_Grid_Column.cs" />
+    <Compile Include="Generated\DSRSI_AD_Grid_Column_Warning.cs" />
+    <Compile Include="Generated\DSRSI_AD_Grid_Filter.cs" />
+    <Compile Include="Generated\DSRSI_AD_Grid_Group.cs" />
+    <Compile Include="Generated\DSRSI_AD_Grid_Related.cs" />
+    <Compile Include="Generated\DSRSI_AD_Grid_Related_Address.cs" />
+    <Compile Include="Generated\DSRSI_AD_Grid_Row.cs" />
+    <Compile Include="Generated\DSRSI_AD_Menu.cs" />
+    <Compile Include="Generated\DSRSI_AD_NameValueMapping.cs" />
+    <Compile Include="Generated\DSRSI_AD_Org.cs" />
+    <Compile Include="Generated\DSRSI_AD_Param_Creator.cs" />
+    <Compile Include="Generated\DSRSI_AD_Plugin.cs" />
+    <Compile Include="Generated\DSRSI_AD_Process.cs" />
+    <Compile Include="Generated\DSRSI_AD_Report.cs" />
+    <Compile Include="Generated\DSRSI_AD_Report_Data.cs" />
+    <Compile Include="Generated\DSRSI_AD_Resource.cs" />
+    <Compile Include="Generated\DSRSI_AD_Role.cs" />
+    <Compile Include="Generated\DSRSI_AD_Search_Custom.cs" />
+    <Compile Include="Generated\DSRSI_AD_SimpleParam.cs" />
+    <Compile Include="Generated\DSRSI_AD_Task.cs" />
+    <Compile Include="Generated\DSRSI_AD_Web_Service.cs" />
+    <Compile Include="Generated\DSRSI_AD_Window.cs" />
+    <Compile Include="Generated\DSRSI_AD_Window_Menu.cs" />
+    <Compile Include="Generated\DSRSI_AD_Window_Select.cs" />
+    <Compile Include="Generated\DSRSI_AD_Window_Tab.cs" />
+    <Compile Include="Generated\DSRSI_AD_Window_Tab_Event.cs" />
+    <Compile Include="Generated\DSRSI_SD_Alert.cs" />
+    <Compile Include="Generated\DSRSI_SD_AuditLog.cs" />
+    <Compile Include="Generated\DSRSI_SD_Track.cs" />
+    <Compile Include="Generated\DSRSI_SD_User_Configuration.cs" />
+    <Compile Include="Generated\DSRSI_Test_Tab窗体_主.cs" />
+    <Compile Include="Generated\DSRSI_WS_AD_Action.cs" />
+    <Compile Include="Generated\DSRSI_WS_AD_AlertRule.cs" />
+    <Compile Include="Generated\DSRSI_WS_AD_Client.cs" />
+    <Compile Include="Generated\DSRSI_WS_AD_CommandBinding.cs" />
+    <Compile Include="Generated\DSRSI_WS_AD_EntityBuffer.cs" />
+    <Compile Include="Generated\DSRSI_WS_AD_EventProcess.cs" />
+    <Compile Include="Generated\DSRSI_WS_AD_Form.cs" />
+    <Compile Include="Generated\DSRSI_WS_AD_Grid.cs" />
+    <Compile Include="Generated\DSRSI_WS_AD_Grid_Cell.cs" />
+    <Compile Include="Generated\DSRSI_WS_AD_Grid_Column.cs" />
+    <Compile Include="Generated\DSRSI_WS_AD_Grid_Column_Warning.cs" />
+    <Compile Include="Generated\DSRSI_WS_AD_Grid_Filter.cs" />
+    <Compile Include="Generated\DSRSI_WS_AD_Grid_Group.cs" />
+    <Compile Include="Generated\DSRSI_WS_AD_Grid_Related.cs" />
+    <Compile Include="Generated\DSRSI_WS_AD_Grid_Related_Address.cs" />
+    <Compile Include="Generated\DSRSI_WS_AD_Grid_Row.cs" />
+    <Compile Include="Generated\DSRSI_WS_AD_Menu.cs" />
+    <Compile Include="Generated\DSRSI_WS_AD_NameValueMapping.cs" />
+    <Compile Include="Generated\DSRSI_WS_AD_Org.cs" />
+    <Compile Include="Generated\DSRSI_WS_AD_Param_Creator.cs" />
+    <Compile Include="Generated\DSRSI_WS_AD_Plugin.cs" />
+    <Compile Include="Generated\DSRSI_WS_AD_Process.cs" />
+    <Compile Include="Generated\DSRSI_WS_AD_Report.cs" />
+    <Compile Include="Generated\DSRSI_WS_AD_Report_Data.cs" />
+    <Compile Include="Generated\DSRSI_WS_AD_Resource.cs" />
+    <Compile Include="Generated\DSRSI_WS_AD_Role.cs" />
+    <Compile Include="Generated\DSRSI_WS_AD_Search_Custom.cs" />
+    <Compile Include="Generated\DSRSI_WS_AD_SimpleParam.cs" />
+    <Compile Include="Generated\DSRSI_WS_AD_Task.cs" />
+    <Compile Include="Generated\DSRSI_WS_AD_Web_Service.cs" />
+    <Compile Include="Generated\DSRSI_WS_AD_Window.cs" />
+    <Compile Include="Generated\DSRSI_WS_AD_Window_Menu.cs" />
+    <Compile Include="Generated\DSRSI_WS_AD_Window_Select.cs" />
+    <Compile Include="Generated\DSRSI_WS_AD_Window_Tab.cs" />
+    <Compile Include="Generated\DSRSI_WS_AD_Window_Tab_Event.cs" />
+    <Compile Include="Generated\DSRSI_WS_SD_Alert.cs" />
+    <Compile Include="Generated\DSRSI_WS_SD_AuditLog.cs" />
+    <Compile Include="Generated\DSRSI_WS_SD_Track.cs" />
+    <Compile Include="Generated\DSRSI_WS_SD_User_Configuration.cs" />
+    <Compile Include="Generated\DSRSI_专家级调度_一级动态优化_动态出口箱带货_任务集合top.cs" />
+    <Compile Include="Generated\DSRSI_专家级调度_一级动态优化_动态套箱_任务集合top.cs" />
+    <Compile Include="Generated\DSRSI_专家级调度_一级动态优化_动态小箱配对_任务集合bottom.cs" />
+    <Compile Include="Generated\DSRSI_专家级调度_一级动态优化_动态小箱配对_任务集合top.cs" />
+    <Compile Include="Generated\DSRSI_专家级调度_一级动态优化_动态进口箱带货_任务集合top.cs" />
+    <Compile Include="Generated\DSRSI_专家级调度_一级静态优化_小箱配对_任务集合bottom.cs" />
+    <Compile Include="Generated\DSRSI_专家级调度_一级静态优化_小箱配对_任务集合top.cs" />
+    <Compile Include="Generated\DSRSI_专家级调度_一级静态优化_紧急任务下达.cs" />
+    <Compile Include="Generated\DSRSI_专家级调度_一级静态优化_静态出口箱带货_任务集合bottom.cs" />
+    <Compile Include="Generated\DSRSI_专家级调度_一级静态优化_静态出口箱带货_任务集合top.cs" />
+    <Compile Include="Generated\DSRSI_专家级调度_一级静态优化_静态套箱_任务集合bottom.cs" />
+    <Compile Include="Generated\DSRSI_专家级调度_一级静态优化_静态套箱_任务集合top.cs" />
+    <Compile Include="Generated\DSRSI_专家级调度_一级静态优化_静态进口箱带货_任务集合bottom.cs" />
+    <Compile Include="Generated\DSRSI_专家级调度_一级静态优化_静态进口箱带货_任务集合top.cs" />
+    <Compile Include="Generated\DSRSI_专家级调度_静态任务下达_已优化过的任务集合.cs" />
+    <Compile Include="Generated\DSRSI_专家级调度_静态任务下达_未优化过的任务集合.cs" />
+    <Compile Include="Generated\DSRSI_专家级调度主界面_原始.cs" />
+    <Compile Include="Generated\DSRSI_专家级调度主界面_已下达.cs" />
+    <Compile Include="Generated\DSRSI_专家级调度主界面_未分派.cs" />
+    <Compile Include="Generated\DSRSI_专家级调度主界面_运行中.cs" />
+    <Compile Include="Generated\DSRSI_任务备案_任务正式备案.cs" />
+    <Compile Include="Generated\DSRSI_任务备案_任务正式备案二.cs" />
+    <Compile Include="Generated\DSRSI_任务备案_任务预备案.cs" />
+    <Compile Include="Generated\DSRSI_任务备案_进口箱批量任务录入_显示区.cs" />
+    <Compile Include="Generated\DSRSI_任务备案_进口箱批量任务录入_暂存区.cs" />
+    <Compile Include="Generated\DSRSI_任务备案_进口箱批量任务确认_显示区.cs" />
+    <Compile Include="Generated\DSRSI_任务备案_进口箱批量任务确认_暂存区.cs" />
+    <Compile Include="Generated\DSRSI_参数备案_人员单位.cs" />
+    <Compile Include="Generated\DSRSI_参数备案_施验封地.cs" />
+    <Compile Include="Generated\DSRSI_参数备案_车辆.cs" />
+    <Compile Include="Generated\DSRSI_实时监控_车辆作业_任务监控区.cs" />
+    <Compile Include="Generated\DSRSI_实时监控_车辆作业_作业开始结束.cs" />
+    <Compile Include="Generated\DSRSI_实时监控_车辆作业_作业监控区.cs" />
+    <Compile Include="Generated\DSRSI_实时监控_车辆作业_作业退回申请.cs" />
+    <Compile Include="Generated\DSRSI_实时监控_车辆作业_动态任务追加.cs" />
+    <Compile Include="Generated\DSRSI_实时监控_车辆作业_单个作业监控详情_任务.cs" />
+    <Compile Include="Generated\DSRSI_实时监控_车辆作业_单个作业监控详情_任务2.cs" />
+    <Compile Include="Generated\DSRSI_实时监控_车辆作业_异常处理.cs" />
+    <Compile Include="Generated\DSRSI_实时监控_车辆作业_承运时间要求详情_任务.cs" />
+    <Compile Include="Generated\DSRSI_实时监控_车辆作业_电子作业单.cs" />
+    <Compile Include="Generated\DSRSI_实时监控_车辆作业_电子作业单_作业流程.cs" />
+    <Compile Include="Generated\DSRSI_实时监控_车辆作业_监控级调度主界面_未开始.cs" />
+    <Compile Include="Generated\DSRSI_实时监控_车辆作业_监控级调度主界面_运行中.cs" />
+    <Compile Include="Generated\DSRSI_实时监控_车辆作业_监控结束.cs" />
+    <Compile Include="Generated\DSRSI_实时监控_车辆作业_监控结束_任务.cs" />
+    <Compile Include="Generated\DSRSI_实时监控_车辆作业_车载ID当前使用情况.cs" />
+    <Compile Include="Generated\DSRSI_实时监控_车辆作业_车辆详细信息.cs" />
+    <Compile Include="Generated\DSRSI_查询统计_备案确认情况查询.cs" />
+    <Compile Include="Generated\DSRSI_查询统计_预录入发送后情况查询.cs" />
+    <Compile Include="Generated\DSRSI_管理_专家任务管理.cs" />
+    <Compile Include="Generated\DSRSI_管理_任务管理.cs" />
+    <Compile Include="Generated\DSRSI_网上查询_任务明细.cs" />
+    <Compile Include="Generated\DSRSI_网上查询_任务查询.cs" />
+    <Compile Include="Generated\DSRSI_车队级调度_主界面_新任务集合.cs" />
+    <Compile Include="Generated\DSRSI_车队级调度_主界面_未结束.cs" />
+    <Compile Include="Generated\DSRSI_车队级调度_车辆报停启用.cs" />
+    <Compile Include="Generated\DSRSI_车队级调度_转关箱预排车_待排转关箱任务.cs" />
+    <Compile Include="Generated\DSRSI_车队级调度_转关箱预排车_暂存计划区.cs" />
+    <Compile Include="Generated\DSRSI_车队级调度_转关箱预排车_监管车辆及作业状况.cs" />
+    <Compile Include="Generated\DSRSI_车队级调度_静态任务下达_单车后续作业计划_专家任务.cs" />
+    <Compile Include="Generated\DSRSI_车队级调度_静态任务下达_待命车辆_单车单任务.cs" />
+    <Compile Include="Generated\DSRSI_车队级调度_静态任务下达_待命车辆_单车多任务.cs" />
+    <Compile Include="Generated\DSRSI_车队级调度_静态任务下达_待排任务.cs" />
+    <Compile Include="Generated\DSRS_AD_Action.svc.cs">
+      <DependentUpon>DSRS_AD_Action.svc</DependentUpon>
+    </Compile>
+    <Compile Include="Generated\DSRS_AD_AlertRule.svc.cs">
+      <DependentUpon>DSRS_AD_AlertRule.svc</DependentUpon>
+    </Compile>
+    <Compile Include="Generated\DSRS_AD_Client.svc.cs">
+      <DependentUpon>DSRS_AD_Client.svc</DependentUpon>
+    </Compile>
+    <Compile Include="Generated\DSRS_AD_CommandBinding.svc.cs">
+      <DependentUpon>DSRS_AD_CommandBinding.svc</DependentUpon>
+    </Compile>
+    <Compile Include="Generated\DSRS_AD_EntityBuffer.svc.cs">
+      <DependentUpon>DSRS_AD_EntityBuffer.svc</DependentUpon>
+    </Compile>
+    <Compile Include="Generated\DSRS_AD_EventProcess.svc.cs">
+      <DependentUpon>DSRS_AD_EventProcess.svc</DependentUpon>
+    </Compile>
+    <Compile Include="Generated\DSRS_AD_Form.svc.cs">
+      <DependentUpon>DSRS_AD_Form.svc</DependentUpon>
+    </Compile>
+    <Compile Include="Generated\DSRS_AD_Grid.svc.cs">
+      <DependentUpon>DSRS_AD_Grid.svc</DependentUpon>
+    </Compile>
+    <Compile Include="Generated\DSRS_AD_Grid_Cell.svc.cs">
+      <DependentUpon>DSRS_AD_Grid_Cell.svc</DependentUpon>
+    </Compile>
+    <Compile Include="Generated\DSRS_AD_Grid_Column.svc.cs">
+      <DependentUpon>DSRS_AD_Grid_Column.svc</DependentUpon>
+    </Compile>
+    <Compile Include="Generated\DSRS_AD_Grid_Column_Warning.svc.cs">
+      <DependentUpon>DSRS_AD_Grid_Column_Warning.svc</DependentUpon>
+    </Compile>
+    <Compile Include="Generated\DSRS_AD_Grid_Filter.svc.cs">
+      <DependentUpon>DSRS_AD_Grid_Filter.svc</DependentUpon>
+    </Compile>
+    <Compile Include="Generated\DSRS_AD_Grid_Group.svc.cs">
+      <DependentUpon>DSRS_AD_Grid_Group.svc</DependentUpon>
+    </Compile>
+    <Compile Include="Generated\DSRS_AD_Grid_Related.svc.cs">
+      <DependentUpon>DSRS_AD_Grid_Related.svc</DependentUpon>
+    </Compile>
+    <Compile Include="Generated\DSRS_AD_Grid_Related_Address.svc.cs">
+      <DependentUpon>DSRS_AD_Grid_Related_Address.svc</DependentUpon>
+    </Compile>
+    <Compile Include="Generated\DSRS_AD_Grid_Row.svc.cs">
+      <DependentUpon>DSRS_AD_Grid_Row.svc</DependentUpon>
+    </Compile>
+    <Compile Include="Generated\DSRS_AD_Menu.svc.cs">
+      <DependentUpon>DSRS_AD_Menu.svc</DependentUpon>
+    </Compile>
+    <Compile Include="Generated\DSRS_AD_NameValueMapping.svc.cs">
+      <DependentUpon>DSRS_AD_NameValueMapping.svc</DependentUpon>
+    </Compile>
+    <Compile Include="Generated\DSRS_AD_Org.svc.cs">
+      <DependentUpon>DSRS_AD_Org.svc</DependentUpon>
+    </Compile>
+    <Compile Include="Generated\DSRS_AD_Param_Creator.svc.cs">
+      <DependentUpon>DSRS_AD_Param_Creator.svc</DependentUpon>
+    </Compile>
+    <Compile Include="Generated\DSRS_AD_Plugin.svc.cs">
+      <DependentUpon>DSRS_AD_Plugin.svc</DependentUpon>
+    </Compile>
+    <Compile Include="Generated\DSRS_AD_Process.svc.cs">
+      <DependentUpon>DSRS_AD_Process.svc</DependentUpon>
+    </Compile>
+    <Compile Include="Generated\DSRS_AD_Report.svc.cs">
+      <DependentUpon>DSRS_AD_Report.svc</DependentUpon>
+    </Compile>
+    <Compile Include="Generated\DSRS_AD_Report_Data.svc.cs">
+      <DependentUpon>DSRS_AD_Report_Data.svc</DependentUpon>
+    </Compile>
+    <Compile Include="Generated\DSRS_AD_Resource.svc.cs">
+      <DependentUpon>DSRS_AD_Resource.svc</DependentUpon>
+    </Compile>
+    <Compile Include="Generated\DSRS_AD_Role.svc.cs">
+      <DependentUpon>DSRS_AD_Role.svc</DependentUpon>
+    </Compile>
+    <Compile Include="Generated\DSRS_AD_Search_Custom.svc.cs">
+      <DependentUpon>DSRS_AD_Search_Custom.svc</DependentUpon>
+    </Compile>
+    <Compile Include="Generated\DSRS_AD_SimpleParam.svc.cs">
+      <DependentUpon>DSRS_AD_SimpleParam.svc</DependentUpon>
+    </Compile>
+    <Compile Include="Generated\DSRS_AD_Task.svc.cs">
+      <DependentUpon>DSRS_AD_Task.svc</DependentUpon>
+    </Compile>
+    <Compile Include="Generated\DSRS_AD_Web_Service.svc.cs">
+      <DependentUpon>DSRS_AD_Web_Service.svc</DependentUpon>
+    </Compile>
+    <Compile Include="Generated\DSRS_AD_Window.svc.cs">
+      <DependentUpon>DSRS_AD_Window.svc</DependentUpon>
+    </Compile>
+    <Compile Include="Generated\DSRS_AD_Window_Menu.svc.cs">
+      <DependentUpon>DSRS_AD_Window_Menu.svc</DependentUpon>
+    </Compile>
+    <Compile Include="Generated\DSRS_AD_Window_Select.svc.cs">
+      <DependentUpon>DSRS_AD_Window_Select.svc</DependentUpon>
+    </Compile>
+    <Compile Include="Generated\DSRS_AD_Window_Tab.svc.cs">
+      <DependentUpon>DSRS_AD_Window_Tab.svc</DependentUpon>
+    </Compile>
+    <Compile Include="Generated\DSRS_AD_Window_Tab_Event.svc.cs">
+      <DependentUpon>DSRS_AD_Window_Tab_Event.svc</DependentUpon>
+    </Compile>
+    <Compile Include="Generated\DSRS_SD_Alert.svc.cs">
+      <DependentUpon>DSRS_SD_Alert.svc</DependentUpon>
+    </Compile>
+    <Compile Include="Generated\DSRS_SD_AuditLog.svc.cs">
+      <DependentUpon>DSRS_SD_AuditLog.svc</DependentUpon>
+    </Compile>
+    <Compile Include="Generated\DSRS_SD_Track.svc.cs">
+      <DependentUpon>DSRS_SD_Track.svc</DependentUpon>
+    </Compile>
+    <Compile Include="Generated\DSRS_SD_User_Configuration.svc.cs">
+      <DependentUpon>DSRS_SD_User_Configuration.svc</DependentUpon>
+    </Compile>
+    <Compile Include="Generated\DSRS_Test_Tab窗体_主.svc.cs">
+      <DependentUpon>DSRS_Test_Tab窗体_主.svc</DependentUpon>
+    </Compile>
+    <Compile Include="Generated\DSRS_WS_AD_Action.svc.cs">
+      <DependentUpon>DSRS_WS_AD_Action.svc</DependentUpon>
+    </Compile>
+    <Compile Include="Generated\DSRS_WS_AD_AlertRule.svc.cs">
+      <DependentUpon>DSRS_WS_AD_AlertRule.svc</DependentUpon>
+    </Compile>
+    <Compile Include="Generated\DSRS_WS_AD_Client.svc.cs">
+      <DependentUpon>DSRS_WS_AD_Client.svc</DependentUpon>
+    </Compile>
+    <Compile Include="Generated\DSRS_WS_AD_CommandBinding.svc.cs">
+      <DependentUpon>DSRS_WS_AD_CommandBinding.svc</DependentUpon>
+    </Compile>
+    <Compile Include="Generated\DSRS_WS_AD_EntityBuffer.svc.cs">
+      <DependentUpon>DSRS_WS_AD_EntityBuffer.svc</DependentUpon>
+    </Compile>
+    <Compile Include="Generated\DSRS_WS_AD_EventProcess.svc.cs">
+      <DependentUpon>DSRS_WS_AD_EventProcess.svc</DependentUpon>
+    </Compile>
+    <Compile Include="Generated\DSRS_WS_AD_Form.svc.cs">
+      <DependentUpon>DSRS_WS_AD_Form.svc</DependentUpon>
+    </Compile>
+    <Compile Include="Generated\DSRS_WS_AD_Grid.svc.cs">
+      <DependentUpon>DSRS_WS_AD_Grid.svc</DependentUpon>
+    </Compile>
+    <Compile Include="Generated\DSRS_WS_AD_Grid_Cell.svc.cs">
+      <DependentUpon>DSRS_WS_AD_Grid_Cell.svc</DependentUpon>
+    </Compile>
+    <Compile Include="Generated\DSRS_WS_AD_Grid_Column.svc.cs">
+      <DependentUpon>DSRS_WS_AD_Grid_Column.svc</DependentUpon>
+    </Compile>
+    <Compile Include="Generated\DSRS_WS_AD_Grid_Column_Warning.svc.cs">
+      <DependentUpon>DSRS_WS_AD_Grid_Column_Warning.svc</DependentUpon>
+    </Compile>
+    <Compile Include="Generated\DSRS_WS_AD_Grid_Filter.svc.cs">
+      <DependentUpon>DSRS_WS_AD_Grid_Filter.svc</DependentUpon>
+    </Compile>
+    <Compile Include="Generated\DSRS_WS_AD_Grid_Group.svc.cs">
+      <DependentUpon>DSRS_WS_AD_Grid_Group.svc</DependentUpon>
+    </Compile>
+    <Compile Include="Generated\DSRS_WS_AD_Grid_Related.svc.cs">
+      <DependentUpon>DSRS_WS_AD_Grid_Related.svc</DependentUpon>
+    </Compile>
+    <Compile Include="Generated\DSRS_WS_AD_Grid_Related_Address.svc.cs">
+      <DependentUpon>DSRS_WS_AD_Grid_Related_Address.svc</DependentUpon>
+    </Compile>
+    <Compile Include="Generated\DSRS_WS_AD_Grid_Row.svc.cs">
+      <DependentUpon>DSRS_WS_AD_Grid_Row.svc</DependentUpon>
+    </Compile>
+    <Compile Include="Generated\DSRS_WS_AD_Menu.svc.cs">
+      <DependentUpon>DSRS_WS_AD_Menu.svc</DependentUpon>
+    </Compile>
+    <Compile Include="Generated\DSRS_WS_AD_NameValueMapping.svc.cs">
+      <DependentUpon>DSRS_WS_AD_NameValueMapping.svc</DependentUpon>
+    </Compile>
+    <Compile Include="Generated\DSRS_WS_AD_Org.svc.cs">
+      <DependentUpon>DSRS_WS_AD_Org.svc</DependentUpon>
+    </Compile>
+    <Compile Include="Generated\DSRS_WS_AD_Param_Creator.svc.cs">
+      <DependentUpon>DSRS_WS_AD_Param_Creator.svc</DependentUpon>
+    </Compile>
+    <Compile Include="Generated\DSRS_WS_AD_Plugin.svc.cs">
+      <DependentUpon>DSRS_WS_AD_Plugin.svc</DependentUpon>
+    </Compile>
+    <Compile Include="Generated\DSRS_WS_AD_Process.svc.cs">
+      <DependentUpon>DSRS_WS_AD_Process.svc</DependentUpon>
+    </Compile>
+    <Compile Include="Generated\DSRS_WS_AD_Report.svc.cs">
+      <DependentUpon>DSRS_WS_AD_Report.svc</DependentUpon>
+    </Compile>
+    <Compile Include="Generated\DSRS_WS_AD_Report_Data.svc.cs">
+      <DependentUpon>DSRS_WS_AD_Report_Data.svc</DependentUpon>
+    </Compile>
+    <Compile Include="Generated\DSRS_WS_AD_Resource.svc.cs">
+      <DependentUpon>DSRS_WS_AD_Resource.svc</DependentUpon>
+    </Compile>
+    <Compile Include="Generated\DSRS_WS_AD_Role.svc.cs">
+      <DependentUpon>DSRS_WS_AD_Role.svc</DependentUpon>
+    </Compile>
+    <Compile Include="Generated\DSRS_WS_AD_Search_Custom.svc.cs">
+      <DependentUpon>DSRS_WS_AD_Search_Custom.svc</DependentUpon>
+    </Compile>
+    <Compile Include="Generated\DSRS_WS_AD_SimpleParam.svc.cs">
+      <DependentUpon>DSRS_WS_AD_SimpleParam.svc</DependentUpon>
+    </Compile>
+    <Compile Include="Generated\DSRS_WS_AD_Task.svc.cs">
+      <DependentUpon>DSRS_WS_AD_Task.svc</DependentUpon>
+    </Compile>
+    <Compile Include="Generated\DSRS_WS_AD_Web_Service.svc.cs">
+      <DependentUpon>DSRS_WS_AD_Web_Service.svc</DependentUpon>
+    </Compile>
+    <Compile Include="Generated\DSRS_WS_AD_Window.svc.cs">
+      <DependentUpon>DSRS_WS_AD_Window.svc</DependentUpon>
+    </Compile>
+    <Compile Include="Generated\DSRS_WS_AD_Window_Menu.svc.cs">
+      <DependentUpon>DSRS_WS_AD_Window_Menu.svc</DependentUpon>
+    </Compile>
+    <Compile Include="Generated\DSRS_WS_AD_Window_Select.svc.cs">
+      <DependentUpon>DSRS_WS_AD_Window_Select.svc</DependentUpon>
+    </Compile>
+    <Compile Include="Generated\DSRS_WS_AD_Window_Tab.svc.cs">
+      <DependentUpon>DSRS_WS_AD_Window_Tab.svc</DependentUpon>
+    </Compile>
+    <Compile Include="Generated\DSRS_WS_AD_Window_Tab_Event.svc.cs">
+      <DependentUpon>DSRS_WS_AD_Window_Tab_Event.svc</DependentUpon>
+    </Compile>
+    <Compile Include="Generated\DSRS_WS_SD_Alert.svc.cs">
+      <DependentUpon>DSRS_WS_SD_Alert.svc</DependentUpon>
+    </Compile>
+    <Compile Include="Generated\DSRS_WS_SD_AuditLog.svc.cs">
+      <DependentUpon>DSRS_WS_SD_AuditLog.svc</DependentUpon>
+    </Compile>
+    <Compile Include="Generated\DSRS_WS_SD_Track.svc.cs">
+      <DependentUpon>DSRS_WS_SD_Track.svc</DependentUpon>
+    </Compile>
+    <Compile Include="Generated\DSRS_WS_SD_User_Configuration.svc.cs">
+      <DependentUpon>DSRS_WS_SD_User_Configuration.svc</DependentUpon>
+    </Compile>
+    <Compile Include="Generated\DSRS_专家级调度_一级动态优化_动态出口箱带货_任务集合top.svc.cs">
+      <DependentUpon>DSRS_专家级调度_一级动态优化_动态出口箱带货_任务集合top.svc</DependentUpon>
+    </Compile>
+    <Compile Include="Generated\DSRS_专家级调度_一级动态优化_动态套箱_任务集合top.svc.cs">
+      <DependentUpon>DSRS_专家级调度_一级动态优化_动态套箱_任务集合top.svc</DependentUpon>
+    </Compile>
+    <Compile Include="Generated\DSRS_专家级调度_一级动态优化_动态小箱配对_任务集合bottom.svc.cs">
+      <DependentUpon>DSRS_专家级调度_一级动态优化_动态小箱配对_任务集合bottom.svc</DependentUpon>
+    </Compile>
+    <Compile Include="Generated\DSRS_专家级调度_一级动态优化_动态小箱配对_任务集合top.svc.cs">
+      <DependentUpon>DSRS_专家级调度_一级动态优化_动态小箱配对_任务集合top.svc</DependentUpon>
+    </Compile>
+    <Compile Include="Generated\DSRS_专家级调度_一级动态优化_动态进口箱带货_任务集合top.svc.cs">
+      <DependentUpon>DSRS_专家级调度_一级动态优化_动态进口箱带货_任务集合top.svc</DependentUpon>
+    </Compile>
+    <Compile Include="Generated\DSRS_专家级调度_一级静态优化_小箱配对_任务集合bottom.svc.cs">
+      <DependentUpon>DSRS_专家级调度_一级静态优化_小箱配对_任务集合bottom.svc</DependentUpon>
+    </Compile>
+    <Compile Include="Generated\DSRS_专家级调度_一级静态优化_小箱配对_任务集合top.svc.cs">
+      <DependentUpon>DSRS_专家级调度_一级静态优化_小箱配对_任务集合top.svc</DependentUpon>
+    </Compile>
+    <Compile Include="Generated\DSRS_专家级调度_一级静态优化_紧急任务下达.svc.cs">
+      <DependentUpon>DSRS_专家级调度_一级静态优化_紧急任务下达.svc</DependentUpon>
+    </Compile>
+    <Compile Include="Generated\DSRS_专家级调度_一级静态优化_静态出口箱带货_任务集合bottom.svc.cs">
+      <DependentUpon>DSRS_专家级调度_一级静态优化_静态出口箱带货_任务集合bottom.svc</DependentUpon>
+    </Compile>
+    <Compile Include="Generated\DSRS_专家级调度_一级静态优化_静态出口箱带货_任务集合top.svc.cs">
+      <DependentUpon>DSRS_专家级调度_一级静态优化_静态出口箱带货_任务集合top.svc</DependentUpon>
+    </Compile>
+    <Compile Include="Generated\DSRS_专家级调度_一级静态优化_静态套箱_任务集合bottom.svc.cs">
+      <DependentUpon>DSRS_专家级调度_一级静态优化_静态套箱_任务集合bottom.svc</DependentUpon>
+    </Compile>
+    <Compile Include="Generated\DSRS_专家级调度_一级静态优化_静态套箱_任务集合top.svc.cs">
+      <DependentUpon>DSRS_专家级调度_一级静态优化_静态套箱_任务集合top.svc</DependentUpon>
+    </Compile>
+    <Compile Include="Generated\DSRS_专家级调度_一级静态优化_静态进口箱带货_任务集合bottom.svc.cs">
+      <DependentUpon>DSRS_专家级调度_一级静态优化_静态进口箱带货_任务集合bottom.svc</DependentUpon>
+    </Compile>
+    <Compile Include="Generated\DSRS_专家级调度_一级静态优化_静态进口箱带货_任务集合top.svc.cs">
+      <DependentUpon>DSRS_专家级调度_一级静态优化_静态进口箱带货_任务集合top.svc</DependentUpon>
+    </Compile>
+    <Compile Include="Generated\DSRS_专家级调度_静态任务下达_已优化过的任务集合.svc.cs">
+      <DependentUpon>DSRS_专家级调度_静态任务下达_已优化过的任务集合.svc</DependentUpon>
+    </Compile>
+    <Compile Include="Generated\DSRS_专家级调度_静态任务下达_未优化过的任务集合.svc.cs">
+      <DependentUpon>DSRS_专家级调度_静态任务下达_未优化过的任务集合.svc</DependentUpon>
+    </Compile>
+    <Compile Include="Generated\DSRS_专家级调度主界面_原始.svc.cs">
+      <DependentUpon>DSRS_专家级调度主界面_原始.svc</DependentUpon>
+    </Compile>
+    <Compile Include="Generated\DSRS_专家级调度主界面_已下达.svc.cs">
+      <DependentUpon>DSRS_专家级调度主界面_已下达.svc</DependentUpon>
+    </Compile>
+    <Compile Include="Generated\DSRS_专家级调度主界面_未分派.svc.cs">
+      <DependentUpon>DSRS_专家级调度主界面_未分派.svc</DependentUpon>
+    </Compile>
+    <Compile Include="Generated\DSRS_专家级调度主界面_运行中.svc.cs">
+      <DependentUpon>DSRS_专家级调度主界面_运行中.svc</DependentUpon>
+    </Compile>
+    <Compile Include="Generated\DSRS_任务备案_任务正式备案.svc.cs">
+      <DependentUpon>DSRS_任务备案_任务正式备案.svc</DependentUpon>
+    </Compile>
+    <Compile Include="Generated\DSRS_任务备案_任务正式备案二.svc.cs">
+      <DependentUpon>DSRS_任务备案_任务正式备案二.svc</DependentUpon>
+    </Compile>
+    <Compile Include="Generated\DSRS_任务备案_任务预备案.svc.cs">
+      <DependentUpon>DSRS_任务备案_任务预备案.svc</DependentUpon>
+    </Compile>
+    <Compile Include="Generated\DSRS_任务备案_进口箱批量任务录入_显示区.svc.cs">
+      <DependentUpon>DSRS_任务备案_进口箱批量任务录入_显示区.svc</DependentUpon>
+    </Compile>
+    <Compile Include="Generated\DSRS_任务备案_进口箱批量任务录入_暂存区.svc.cs">
+      <DependentUpon>DSRS_任务备案_进口箱批量任务录入_暂存区.svc</DependentUpon>
+    </Compile>
+    <Compile Include="Generated\DSRS_任务备案_进口箱批量任务确认_显示区.svc.cs">
+      <DependentUpon>DSRS_任务备案_进口箱批量任务确认_显示区.svc</DependentUpon>
+    </Compile>
+    <Compile Include="Generated\DSRS_任务备案_进口箱批量任务确认_暂存区.svc.cs">
+      <DependentUpon>DSRS_任务备案_进口箱批量任务确认_暂存区.svc</DependentUpon>
+    </Compile>
+    <Compile Include="Generated\DSRS_参数备案_人员单位.svc.cs">
+      <DependentUpon>DSRS_参数备案_人员单位.svc</DependentUpon>
+    </Compile>
+    <Compile Include="Generated\DSRS_参数备案_施验封地.svc.cs">
+      <DependentUpon>DSRS_参数备案_施验封地.svc</DependentUpon>
+    </Compile>
+    <Compile Include="Generated\DSRS_参数备案_车辆.svc.cs">
+      <DependentUpon>DSRS_参数备案_车辆.svc</DependentUpon>
+    </Compile>
+    <Compile Include="Generated\DSRS_实时监控_车辆作业_任务监控区.svc.cs">
+      <DependentUpon>DSRS_实时监控_车辆作业_任务监控区.svc</DependentUpon>
+    </Compile>
+    <Compile Include="Generated\DSRS_实时监控_车辆作业_作业开始结束.svc.cs">
+      <DependentUpon>DSRS_实时监控_车辆作业_作业开始结束.svc</DependentUpon>
+    </Compile>
+    <Compile Include="Generated\DSRS_实时监控_车辆作业_作业监控区.svc.cs">
+      <DependentUpon>DSRS_实时监控_车辆作业_作业监控区.svc</DependentUpon>
+    </Compile>
+    <Compile Include="Generated\DSRS_实时监控_车辆作业_作业退回申请.svc.cs">
+      <DependentUpon>DSRS_实时监控_车辆作业_作业退回申请.svc</DependentUpon>
+    </Compile>
+    <Compile Include="Generated\DSRS_实时监控_车辆作业_动态任务追加.svc.cs">
+      <DependentUpon>DSRS_实时监控_车辆作业_动态任务追加.svc</DependentUpon>
+    </Compile>
+    <Compile Include="Generated\DSRS_实时监控_车辆作业_单个作业监控详情_任务.svc.cs">
+      <DependentUpon>DSRS_实时监控_车辆作业_单个作业监控详情_任务.svc</DependentUpon>
+    </Compile>
+    <Compile Include="Generated\DSRS_实时监控_车辆作业_单个作业监控详情_任务2.svc.cs">
+      <DependentUpon>DSRS_实时监控_车辆作业_单个作业监控详情_任务2.svc</DependentUpon>
+    </Compile>
+    <Compile Include="Generated\DSRS_实时监控_车辆作业_异常处理.svc.cs">
+      <DependentUpon>DSRS_实时监控_车辆作业_异常处理.svc</DependentUpon>
+    </Compile>
+    <Compile Include="Generated\DSRS_实时监控_车辆作业_承运时间要求详情_任务.svc.cs">
+      <DependentUpon>DSRS_实时监控_车辆作业_承运时间要求详情_任务.svc</DependentUpon>
+    </Compile>
+    <Compile Include="Generated\DSRS_实时监控_车辆作业_电子作业单.svc.cs">
+      <DependentUpon>DSRS_实时监控_车辆作业_电子作业单.svc</DependentUpon>
+    </Compile>
+    <Compile Include="Generated\DSRS_实时监控_车辆作业_电子作业单_作业流程.svc.cs">
+      <DependentUpon>DSRS_实时监控_车辆作业_电子作业单_作业流程.svc</DependentUpon>
+    </Compile>
+    <Compile Include="Generated\DSRS_实时监控_车辆作业_监控级调度主界面_未开始.svc.cs">
+      <DependentUpon>DSRS_实时监控_车辆作业_监控级调度主界面_未开始.svc</DependentUpon>
+    </Compile>
+    <Compile Include="Generated\DSRS_实时监控_车辆作业_监控级调度主界面_运行中.svc.cs">
+      <DependentUpon>DSRS_实时监控_车辆作业_监控级调度主界面_运行中.svc</DependentUpon>
+    </Compile>
+    <Compile Include="Generated\DSRS_实时监控_车辆作业_监控结束.svc.cs">
+      <DependentUpon>DSRS_实时监控_车辆作业_监控结束.svc</DependentUpon>
+    </Compile>
+    <Compile Include="Generated\DSRS_实时监控_车辆作业_监控结束_任务.svc.cs">
+      <DependentUpon>DSRS_实时监控_车辆作业_监控结束_任务.svc</DependentUpon>
+    </Compile>
+    <Compile Include="Generated\DSRS_实时监控_车辆作业_车载ID当前使用情况.svc.cs">
+      <DependentUpon>DSRS_实时监控_车辆作业_车载ID当前使用情况.svc</DependentUpon>
+    </Compile>
+    <Compile Include="Generated\DSRS_实时监控_车辆作业_车辆详细信息.svc.cs">
+      <DependentUpon>DSRS_实时监控_车辆作业_车辆详细信息.svc</DependentUpon>
+    </Compile>
+    <Compile Include="Generated\DSRS_查询统计_备案确认情况查询.svc.cs">
+      <DependentUpon>DSRS_查询统计_备案确认情况查询.svc</DependentUpon>
+    </Compile>
+    <Compile Include="Generated\DSRS_查询统计_预录入发送后情况查询.svc.cs">
+      <DependentUpon>DSRS_查询统计_预录入发送后情况查询.svc</DependentUpon>
+    </Compile>
+    <Compile Include="Generated\DSRS_管理_专家任务管理.svc.cs">
+      <DependentUpon>DSRS_管理_专家任务管理.svc</DependentUpon>
+    </Compile>
+    <Compile Include="Generated\DSRS_管理_任务管理.svc.cs">
+      <DependentUpon>DSRS_管理_任务管理.svc</DependentUpon>
+    </Compile>
+    <Compile Include="Generated\DSRS_网上查询_任务明细.svc.cs">
+      <DependentUpon>DSRS_网上查询_任务明细.svc</DependentUpon>
+    </Compile>
+    <Compile Include="Generated\DSRS_网上查询_任务查询.svc.cs">
+      <DependentUpon>DSRS_网上查询_任务查询.svc</DependentUpon>
+    </Compile>
+    <Compile Include="Generated\DSRS_车队级调度_主界面_新任务集合.svc.cs">
+      <DependentUpon>DSRS_车队级调度_主界面_新任务集合.svc</DependentUpon>
+    </Compile>
+    <Compile Include="Generated\DSRS_车队级调度_主界面_未结束.svc.cs">
+      <DependentUpon>DSRS_车队级调度_主界面_未结束.svc</DependentUpon>
+    </Compile>
+    <Compile Include="Generated\DSRS_车队级调度_车辆报停启用.svc.cs">
+      <DependentUpon>DSRS_车队级调度_车辆报停启用.svc</DependentUpon>
+    </Compile>
+    <Compile Include="Generated\DSRS_车队级调度_转关箱预排车_待排转关箱任务.svc.cs">
+      <DependentUpon>DSRS_车队级调度_转关箱预排车_待排转关箱任务.svc</DependentUpon>
+    </Compile>
+    <Compile Include="Generated\DSRS_车队级调度_转关箱预排车_暂存计划区.svc.cs">
+      <DependentUpon>DSRS_车队级调度_转关箱预排车_暂存计划区.svc</DependentUpon>
+    </Compile>
+    <Compile Include="Generated\DSRS_车队级调度_转关箱预排车_监管车辆及作业状况.svc.cs">
+      <DependentUpon>DSRS_车队级调度_转关箱预排车_监管车辆及作业状况.svc</DependentUpon>
+    </Compile>
+    <Compile Include="Generated\DSRS_车队级调度_静态任务下达_单车后续作业计划_专家任务.svc.cs">
+      <DependentUpon>DSRS_车队级调度_静态任务下达_单车后续作业计划_专家任务.svc</DependentUpon>
+    </Compile>
+    <Compile Include="Generated\DSRS_车队级调度_静态任务下达_待命车辆_单车单任务.svc.cs">
+      <DependentUpon>DSRS_车队级调度_静态任务下达_待命车辆_单车单任务.svc</DependentUpon>
+    </Compile>
+    <Compile Include="Generated\DSRS_车队级调度_静态任务下达_待命车辆_单车多任务.svc.cs">
+      <DependentUpon>DSRS_车队级调度_静态任务下达_待命车辆_单车多任务.svc</DependentUpon>
+    </Compile>
+    <Compile Include="Generated\DSRS_车队级调度_静态任务下达_待排任务.svc.cs">
+      <DependentUpon>DSRS_车队级调度_静态任务下达_待排任务.svc</DependentUpon>
+    </Compile>
+    <Compile Include="Generated\DSSI_ActionInfo.cs" />
+    <Compile Include="Generated\DSSI_AlertInfo.cs" />
+    <Compile Include="Generated\DSSI_AlertRuleInfo.cs" />
+    <Compile Include="Generated\DSSI_AuditLogRecord.cs" />
+    <Compile Include="Generated\DSSI_ClientInfo.cs" />
+    <Compile Include="Generated\DSSI_CommandBindingInfo.cs" />
+    <Compile Include="Generated\DSSI_CustomSearchInfo.cs" />
+    <Compile Include="Generated\DSSI_EntityBufferInfo.cs" />
+    <Compile Include="Generated\DSSI_EventProcessInfo.cs" />
+    <Compile Include="Generated\DSSI_FormInfo.cs" />
+    <Compile Include="Generated\DSSI_GridCellInfo.cs" />
+    <Compile Include="Generated\DSSI_GridColumnInfo.cs" />
+    <Compile Include="Generated\DSSI_GridColumnWarningInfo.cs" />
+    <Compile Include="Generated\DSSI_GridFilterInfo.cs" />
+    <Compile Include="Generated\DSSI_GridGroupInfo.cs" />
+    <Compile Include="Generated\DSSI_GridInfo.cs" />
+    <Compile Include="Generated\DSSI_GridRelatedAddressInfo.cs" />
+    <Compile Include="Generated\DSSI_GridRelatedInfo.cs" />
+    <Compile Include="Generated\DSSI_GridRowInfo.cs" />
+    <Compile Include="Generated\DSSI_MenuInfo.cs" />
+    <Compile Include="Generated\DSSI_NameValueMappingInfo.cs" />
+    <Compile Include="Generated\DSSI_OrganizationInfo.cs" />
+    <Compile Include="Generated\DSSI_ParamCreatorInfo.cs" />
+    <Compile Include="Generated\DSSI_PluginInfo.cs" />
+    <Compile Include="Generated\DSSI_ProcessInfo.cs" />
+    <Compile Include="Generated\DSSI_ReportDataInfo.cs" />
+    <Compile Include="Generated\DSSI_ReportInfo.cs" />
+    <Compile Include="Generated\DSSI_ResourceInfo.cs" />
+    <Compile Include="Generated\DSSI_RoleInfo.cs" />
+    <Compile Include="Generated\DSSI_SimpleParamInfo.cs" />
+    <Compile Include="Generated\DSSI_TaskInfo.cs" />
+    <Compile Include="Generated\DSSI_Track.cs" />
+    <Compile Include="Generated\DSSI_UserConfigurationInfo.cs" />
+    <Compile Include="Generated\DSSI_WebServiceInfo.cs" />
+    <Compile Include="Generated\DSSI_WindowInfo.cs" />
+    <Compile Include="Generated\DSSI_WindowMenuInfo.cs" />
+    <Compile Include="Generated\DSSI_WindowSelectInfo.cs" />
+    <Compile Include="Generated\DSSI_WindowTabEventInfo.cs" />
+    <Compile Include="Generated\DSSI_WindowTabInfo.cs" />
+    <Compile Include="Generated\DSS_ActionInfo.svc.cs">
+      <DependentUpon>DSS_ActionInfo.svc</DependentUpon>
+    </Compile>
+    <Compile Include="Generated\DSS_AlertInfo.svc.cs">
+      <DependentUpon>DSS_AlertInfo.svc</DependentUpon>
+    </Compile>
+    <Compile Include="Generated\DSS_AlertRuleInfo.svc.cs">
+      <DependentUpon>DSS_AlertRuleInfo.svc</DependentUpon>
+    </Compile>
+    <Compile Include="Generated\DSS_AuditLogRecord.svc.cs">
+      <DependentUpon>DSS_AuditLogRecord.svc</DependentUpon>
+    </Compile>
+    <Compile Include="Generated\DSS_ClientInfo.svc.cs">
+      <DependentUpon>DSS_ClientInfo.svc</DependentUpon>
+    </Compile>
+    <Compile Include="Generated\DSS_CommandBindingInfo.svc.cs">
+      <DependentUpon>DSS_CommandBindingInfo.svc</DependentUpon>
+    </Compile>
+    <Compile Include="Generated\DSS_CustomSearchInfo.svc.cs">
+      <DependentUpon>DSS_CustomSearchInfo.svc</DependentUpon>
+    </Compile>
+    <Compile Include="Generated\DSS_EntityBufferInfo.svc.cs">
+      <DependentUpon>DSS_EntityBufferInfo.svc</DependentUpon>
+    </Compile>
+    <Compile Include="Generated\DSS_EventProcessInfo.svc.cs">
+      <DependentUpon>DSS_EventProcessInfo.svc</DependentUpon>
+    </Compile>
+    <Compile Include="Generated\DSS_FormInfo.svc.cs">
+      <DependentUpon>DSS_FormInfo.svc</DependentUpon>
+    </Compile>
+    <Compile Include="Generated\DSS_GridCellInfo.svc.cs">
+      <DependentUpon>DSS_GridCellInfo.svc</DependentUpon>
+    </Compile>
+    <Compile Include="Generated\DSS_GridColumnInfo.svc.cs">
+      <DependentUpon>DSS_GridColumnInfo.svc</DependentUpon>
+    </Compile>
+    <Compile Include="Generated\DSS_GridColumnWarningInfo.svc.cs">
+      <DependentUpon>DSS_GridColumnWarningInfo.svc</DependentUpon>
+    </Compile>
+    <Compile Include="Generated\DSS_GridFilterInfo.svc.cs">
+      <DependentUpon>DSS_GridFilterInfo.svc</DependentUpon>
+    </Compile>
+    <Compile Include="Generated\DSS_GridGroupInfo.svc.cs">
+      <DependentUpon>DSS_GridGroupInfo.svc</DependentUpon>
+    </Compile>
+    <Compile Include="Generated\DSS_GridInfo.svc.cs">
+      <DependentUpon>DSS_GridInfo.svc</DependentUpon>
+    </Compile>
+    <Compile Include="Generated\DSS_GridRelatedAddressInfo.svc.cs">
+      <DependentUpon>DSS_GridRelatedAddressInfo.svc</DependentUpon>
+    </Compile>
+    <Compile Include="Generated\DSS_GridRelatedInfo.svc.cs">
+      <DependentUpon>DSS_GridRelatedInfo.svc</DependentUpon>
+    </Compile>
+    <Compile Include="Generated\DSS_GridRowInfo.svc.cs">
+      <DependentUpon>DSS_GridRowInfo.svc</DependentUpon>
+    </Compile>
+    <Compile Include="Generated\DSS_MenuInfo.svc.cs">
+      <DependentUpon>DSS_MenuInfo.svc</DependentUpon>
+    </Compile>
+    <Compile Include="Generated\DSS_NameValueMappingInfo.svc.cs">
+      <DependentUpon>DSS_NameValueMappingInfo.svc</DependentUpon>
+    </Compile>
+    <Compile Include="Generated\DSS_OrganizationInfo.svc.cs">
+      <DependentUpon>DSS_OrganizationInfo.svc</DependentUpon>
+    </Compile>
+    <Compile Include="Generated\DSS_ParamCreatorInfo.svc.cs">
+      <DependentUpon>DSS_ParamCreatorInfo.svc</DependentUpon>
+    </Compile>
+    <Compile Include="Generated\DSS_PluginInfo.svc.cs">
+      <DependentUpon>DSS_PluginInfo.svc</DependentUpon>
+    </Compile>
+    <Compile Include="Generated\DSS_ProcessInfo.svc.cs">
+      <DependentUpon>DSS_ProcessInfo.svc</DependentUpon>
+    </Compile>
+    <Compile Include="Generated\DSS_ReportDataInfo.svc.cs">
+      <DependentUpon>DSS_ReportDataInfo.svc</DependentUpon>
+    </Compile>
+    <Compile Include="Generated\DSS_ReportInfo.svc.cs">
+      <DependentUpon>DSS_ReportInfo.svc</DependentUpon>
+    </Compile>
+    <Compile Include="Generated\DSS_ResourceInfo.svc.cs">
+      <DependentUpon>DSS_ResourceInfo.svc</DependentUpon>
+    </Compile>
+    <Compile Include="Generated\DSS_RoleInfo.svc.cs">
+      <DependentUpon>DSS_RoleInfo.svc</DependentUpon>
+    </Compile>
+    <Compile Include="Generated\DSS_SimpleParamInfo.svc.cs">
+      <DependentUpon>DSS_SimpleParamInfo.svc</DependentUpon>
+    </Compile>
+    <Compile Include="Generated\DSS_TaskInfo.svc.cs">
+      <DependentUpon>DSS_TaskInfo.svc</DependentUpon>
+    </Compile>
+    <Compile Include="Generated\DSS_Track.svc.cs">
+      <DependentUpon>DSS_Track.svc</DependentUpon>
+    </Compile>
+    <Compile Include="Generated\DSS_UserConfigurationInfo.svc.cs">
+      <DependentUpon>DSS_UserConfigurationInfo.svc</DependentUpon>
+    </Compile>
+    <Compile Include="Generated\DSS_WebServiceInfo.svc.cs">
+      <DependentUpon>DSS_WebServiceInfo.svc</DependentUpon>
+    </Compile>
+    <Compile Include="Generated\DSS_WindowInfo.svc.cs">
+      <DependentUpon>DSS_WindowInfo.svc</DependentUpon>
+    </Compile>
+    <Compile Include="Generated\DSS_WindowMenuInfo.svc.cs">
+      <DependentUpon>DSS_WindowMenuInfo.svc</DependentUpon>
+    </Compile>
+    <Compile Include="Generated\DSS_WindowSelectInfo.svc.cs">
+      <DependentUpon>DSS_WindowSelectInfo.svc</DependentUpon>
+    </Compile>
+    <Compile Include="Generated\DSS_WindowTabEventInfo.svc.cs">
+      <DependentUpon>DSS_WindowTabEventInfo.svc</DependentUpon>
+    </Compile>
+    <Compile Include="Generated\DSS_WindowTabInfo.svc.cs">
+      <DependentUpon>DSS_WindowTabInfo.svc</DependentUpon>
+    </Compile>
+    <Compile Include="Generated\Type_ActionInfo.cs" />
+    <Compile Include="Generated\Type_AlertInfo.cs" />
+    <Compile Include="Generated\Type_AlertRuleInfo.cs" />
+    <Compile Include="Generated\Type_AuditLogRecord.cs" />
+    <Compile Include="Generated\Type_ClientInfo.cs" />
+    <Compile Include="Generated\Type_CommandBindingInfo.cs" />
+    <Compile Include="Generated\Type_CustomSearchInfo.cs" />
+    <Compile Include="Generated\Type_EntityBufferInfo.cs" />
+    <Compile Include="Generated\Type_EventProcessInfo.cs" />
+    <Compile Include="Generated\Type_FormInfo.cs" />
+    <Compile Include="Generated\Type_GridCellInfo.cs" />
+    <Compile Include="Generated\Type_GridColumnInfo.cs" />
+    <Compile Include="Generated\Type_GridColumnWarningInfo.cs" />
+    <Compile Include="Generated\Type_GridFilterInfo.cs" />
+    <Compile Include="Generated\Type_GridGroupInfo.cs" />
+    <Compile Include="Generated\Type_GridInfo.cs" />
+    <Compile Include="Generated\Type_GridRelatedAddressInfo.cs" />
+    <Compile Include="Generated\Type_GridRelatedInfo.cs" />
+    <Compile Include="Generated\Type_GridRowInfo.cs" />
+    <Compile Include="Generated\Type_MenuInfo.cs" />
+    <Compile Include="Generated\Type_NameValueMappingInfo.cs" />
+    <Compile Include="Generated\Type_OrganizationInfo.cs" />
+    <Compile Include="Generated\Type_ParamCreatorInfo.cs" />
+    <Compile Include="Generated\Type_PluginInfo.cs" />
+    <Compile Include="Generated\Type_ProcessInfo.cs" />
+    <Compile Include="Generated\Type_ReportDataInfo.cs" />
+    <Compile Include="Generated\Type_ReportInfo.cs" />
+    <Compile Include="Generated\Type_ResourceInfo.cs" />
+    <Compile Include="Generated\Type_RoleInfo.cs" />
+    <Compile Include="Generated\Type_SimpleParamInfo.cs" />
+    <Compile Include="Generated\Type_TaskInfo.cs" />
+    <Compile Include="Generated\Type_Track.cs" />
+    <Compile Include="Generated\Type_UserConfigurationInfo.cs" />
+    <Compile Include="Generated\Type_WebServiceInfo.cs" />
+    <Compile Include="Generated\Type_WindowInfo.cs" />
+    <Compile Include="Generated\Type_WindowMenuInfo.cs" />
+    <Compile Include="Generated\Type_WindowSelectInfo.cs" />
+    <Compile Include="Generated\Type_WindowTabEventInfo.cs" />
+    <Compile Include="Generated\Type_WindowTabInfo.cs" />
+    <Compile Include="Generated\WinTab_AD_Action.cs" />
+    <Compile Include="Generated\WinTab_AD_AlertRule.cs" />
+    <Compile Include="Generated\WinTab_AD_Client.cs" />
+    <Compile Include="Generated\WinTab_AD_CommandBinding.cs" />
+    <Compile Include="Generated\WinTab_AD_EntityBuffer.cs" />
+    <Compile Include="Generated\WinTab_AD_EventProcess.cs" />
+    <Compile Include="Generated\WinTab_AD_Form.cs" />
+    <Compile Include="Generated\WinTab_AD_Grid.cs" />
+    <Compile Include="Generated\WinTab_AD_Grid_Cell.cs" />
+    <Compile Include="Generated\WinTab_AD_Grid_Column.cs" />
+    <Compile Include="Generated\WinTab_AD_Grid_Column_Warning.cs" />
+    <Compile Include="Generated\WinTab_AD_Grid_Filter.cs" />
+    <Compile Include="Generated\WinTab_AD_Grid_Group.cs" />
+    <Compile Include="Generated\WinTab_AD_Grid_Related.cs" />
+    <Compile Include="Generated\WinTab_AD_Grid_Related_Address.cs" />
+    <Compile Include="Generated\WinTab_AD_Grid_Row.cs" />
+    <Compile Include="Generated\WinTab_AD_Menu.cs" />
+    <Compile Include="Generated\WinTab_AD_NameValueMapping.cs" />
+    <Compile Include="Generated\WinTab_AD_Org.cs" />
+    <Compile Include="Generated\WinTab_AD_Param_Creator.cs" />
+    <Compile Include="Generated\WinTab_AD_Plugin.cs" />
+    <Compile Include="Generated\WinTab_AD_Process.cs" />
+    <Compile Include="Generated\WinTab_AD_Report.cs" />
+    <Compile Include="Generated\WinTab_AD_Report_Data.cs" />
+    <Compile Include="Generated\WinTab_AD_Resource.cs" />
+    <Compile Include="Generated\WinTab_AD_Role.cs" />
+    <Compile Include="Generated\WinTab_AD_Search_Custom.cs" />
+    <Compile Include="Generated\WinTab_AD_SimpleParam.cs" />
+    <Compile Include="Generated\WinTab_AD_Task.cs" />
+    <Compile Include="Generated\WinTab_AD_Web_Service.cs" />
+    <Compile Include="Generated\WinTab_AD_Window.cs" />
+    <Compile Include="Generated\WinTab_AD_Window_Menu.cs" />
+    <Compile Include="Generated\WinTab_AD_Window_Select.cs" />
+    <Compile Include="Generated\WinTab_AD_Window_Tab.cs" />
+    <Compile Include="Generated\WinTab_AD_Window_Tab_Event.cs" />
+    <Compile Include="Generated\WinTab_SD_Alert.cs" />
+    <Compile Include="Generated\WinTab_SD_AuditLog.cs" />
+    <Compile Include="Generated\WinTab_SD_Track.cs" />
+    <Compile Include="Generated\WinTab_SD_User_Configuration.cs" />
+    <Compile Include="Generated\WinTab_Test_Tab窗体_主.cs" />
+    <Compile Include="Generated\WinTab_WS_AD_Action.cs" />
+    <Compile Include="Generated\WinTab_WS_AD_AlertRule.cs" />
+    <Compile Include="Generated\WinTab_WS_AD_Client.cs" />
+    <Compile Include="Generated\WinTab_WS_AD_CommandBinding.cs" />
+    <Compile Include="Generated\WinTab_WS_AD_EntityBuffer.cs" />
+    <Compile Include="Generated\WinTab_WS_AD_EventProcess.cs" />
+    <Compile Include="Generated\WinTab_WS_AD_Form.cs" />
+    <Compile Include="Generated\WinTab_WS_AD_Grid.cs" />
+    <Compile Include="Generated\WinTab_WS_AD_Grid_Cell.cs" />
+    <Compile Include="Generated\WinTab_WS_AD_Grid_Column.cs" />
+    <Compile Include="Generated\WinTab_WS_AD_Grid_Column_Warning.cs" />
+    <Compile Include="Generated\WinTab_WS_AD_Grid_Filter.cs" />
+    <Compile Include="Generated\WinTab_WS_AD_Grid_Group.cs" />
+    <Compile Include="Generated\WinTab_WS_AD_Grid_Related.cs" />
+    <Compile Include="Generated\WinTab_WS_AD_Grid_Related_Address.cs" />
+    <Compile Include="Generated\WinTab_WS_AD_Grid_Row.cs" />
+    <Compile Include="Generated\WinTab_WS_AD_Menu.cs" />
+    <Compile Include="Generated\WinTab_WS_AD_NameValueMapping.cs" />
+    <Compile Include="Generated\WinTab_WS_AD_Org.cs" />
+    <Compile Include="Generated\WinTab_WS_AD_Param_Creator.cs" />
+    <Compile Include="Generated\WinTab_WS_AD_Plugin.cs" />
+    <Compile Include="Generated\WinTab_WS_AD_Process.cs" />
+    <Compile Include="Generated\WinTab_WS_AD_Report.cs" />
+    <Compile Include="Generated\WinTab_WS_AD_Report_Data.cs" />
+    <Compile Include="Generated\WinTab_WS_AD_Resource.cs" />
+    <Compile Include="Generated\WinTab_WS_AD_Role.cs" />
+    <Compile Include="Generated\WinTab_WS_AD_Search_Custom.cs" />
+    <Compile Include="Generated\WinTab_WS_AD_SimpleParam.cs" />
+    <Compile Include="Generated\WinTab_WS_AD_Task.cs" />
+    <Compile Include="Generated\WinTab_WS_AD_Web_Service.cs" />
+    <Compile Include="Generated\WinTab_WS_AD_Window.cs" />
+    <Compile Include="Generated\WinTab_WS_AD_Window_Menu.cs" />
+    <Compile Include="Generated\WinTab_WS_AD_Window_Select.cs" />
+    <Compile Include="Generated\WinTab_WS_AD_Window_Tab.cs" />
+    <Compile Include="Generated\WinTab_WS_AD_Window_Tab_Event.cs" />
+    <Compile Include="Generated\WinTab_WS_SD_Alert.cs" />
+    <Compile Include="Generated\WinTab_WS_SD_AuditLog.cs" />
+    <Compile Include="Generated\WinTab_WS_SD_Track.cs" />
+    <Compile Include="Generated\WinTab_WS_SD_User_Configuration.cs" />
+    <Compile Include="Generated\WinTab_专家级调度_一级动态优化_动态出口箱带货_任务集合top.cs" />
+    <Compile Include="Generated\WinTab_专家级调度_一级动态优化_动态套箱_任务集合top.cs" />
+    <Compile Include="Generated\WinTab_专家级调度_一级动态优化_动态小箱配对_任务集合bottom.cs" />
+    <Compile Include="Generated\WinTab_专家级调度_一级动态优化_动态小箱配对_任务集合top.cs" />
+    <Compile Include="Generated\WinTab_专家级调度_一级动态优化_动态进口箱带货_任务集合top.cs" />
+    <Compile Include="Generated\WinTab_专家级调度_一级静态优化_小箱配对_任务集合bottom.cs" />
+    <Compile Include="Generated\WinTab_专家级调度_一级静态优化_小箱配对_任务集合top.cs" />
+    <Compile Include="Generated\WinTab_专家级调度_一级静态优化_紧急任务下达.cs" />
+    <Compile Include="Generated\WinTab_专家级调度_一级静态优化_静态出口箱带货_任务集合bottom.cs" />
+    <Compile Include="Generated\WinTab_专家级调度_一级静态优化_静态出口箱带货_任务集合top.cs" />
+    <Compile Include="Generated\WinTab_专家级调度_一级静态优化_静态套箱_任务集合bottom.cs" />
+    <Compile Include="Generated\WinTab_专家级调度_一级静态优化_静态套箱_任务集合top.cs" />
+    <Compile Include="Generated\WinTab_专家级调度_一级静态优化_静态进口箱带货_任务集合bottom.cs" />
+    <Compile Include="Generated\WinTab_专家级调度_一级静态优化_静态进口箱带货_任务集合top.cs" />
+    <Compile Include="Generated\WinTab_专家级调度_静态任务下达_已优化过的任务集合.cs" />
+    <Compile Include="Generated\WinTab_专家级调度_静态任务下达_未优化过的任务集合.cs" />
+    <Compile Include="Generated\WinTab_专家级调度主界面_原始.cs" />
+    <Compile Include="Generated\WinTab_专家级调度主界面_已下达.cs" />
+    <Compile Include="Generated\WinTab_专家级调度主界面_未分派.cs" />
+    <Compile Include="Generated\WinTab_专家级调度主界面_运行中.cs" />
+    <Compile Include="Generated\WinTab_任务备案_任务正式备案.cs" />
+    <Compile Include="Generated\WinTab_任务备案_任务正式备案二.cs" />
+    <Compile Include="Generated\WinTab_任务备案_任务预备案.cs" />
+    <Compile Include="Generated\WinTab_任务备案_进口箱批量任务录入_显示区.cs" />
+    <Compile Include="Generated\WinTab_任务备案_进口箱批量任务录入_暂存区.cs" />
+    <Compile Include="Generated\WinTab_任务备案_进口箱批量任务确认_显示区.cs" />
+    <Compile Include="Generated\WinTab_任务备案_进口箱批量任务确认_暂存区.cs" />
+    <Compile Include="Generated\WinTab_参数备案_人员单位.cs" />
+    <Compile Include="Generated\WinTab_参数备案_施验封地.cs" />
+    <Compile Include="Generated\WinTab_参数备案_车辆.cs" />
+    <Compile Include="Generated\WinTab_实时监控_车辆作业_任务监控区.cs" />
+    <Compile Include="Generated\WinTab_实时监控_车辆作业_作业开始结束.cs" />
+    <Compile Include="Generated\WinTab_实时监控_车辆作业_作业监控区.cs" />
+    <Compile Include="Generated\WinTab_实时监控_车辆作业_作业退回申请.cs" />
+    <Compile Include="Generated\WinTab_实时监控_车辆作业_动态任务追加.cs" />
+    <Compile Include="Generated\WinTab_实时监控_车辆作业_单个作业监控详情_任务.cs" />
+    <Compile Include="Generated\WinTab_实时监控_车辆作业_单个作业监控详情_任务2.cs" />
+    <Compile Include="Generated\WinTab_实时监控_车辆作业_异常处理.cs" />
+    <Compile Include="Generated\WinTab_实时监控_车辆作业_承运时间要求详情_任务.cs" />
+    <Compile Include="Generated\WinTab_实时监控_车辆作业_电子作业单.cs" />
+    <Compile Include="Generated\WinTab_实时监控_车辆作业_电子作业单_作业流程.cs" />
+    <Compile Include="Generated\WinTab_实时监控_车辆作业_监控级调度主界面_未开始.cs" />
+    <Compile Include="Generated\WinTab_实时监控_车辆作业_监控级调度主界面_运行中.cs" />
+    <Compile Include="Generated\WinTab_实时监控_车辆作业_监控结束.cs" />
+    <Compile Include="Generated\WinTab_实时监控_车辆作业_监控结束_任务.cs" />
+    <Compile Include="Generated\WinTab_实时监控_车辆作业_车载ID当前使用情况.cs" />
+    <Compile Include="Generated\WinTab_实时监控_车辆作业_车辆详细信息.cs" />
+    <Compile Include="Generated\WinTab_查询统计_备案确认情况查询.cs" />
+    <Compile Include="Generated\WinTab_查询统计_预录入发送后情况查询.cs" />
+    <Compile Include="Generated\WinTab_管理_专家任务管理.cs" />
+    <Compile Include="Generated\WinTab_管理_任务管理.cs" />
+    <Compile Include="Generated\WinTab_网上查询_任务明细.cs" />
+    <Compile Include="Generated\WinTab_网上查询_任务查询.cs" />
+    <Compile Include="Generated\WinTab_车队级调度_主界面_新任务集合.cs" />
+    <Compile Include="Generated\WinTab_车队级调度_主界面_未结束.cs" />
+    <Compile Include="Generated\WinTab_车队级调度_车辆报停启用.cs" />
+    <Compile Include="Generated\WinTab_车队级调度_转关箱预排车_待排转关箱任务.cs" />
+    <Compile Include="Generated\WinTab_车队级调度_转关箱预排车_暂存计划区.cs" />
+    <Compile Include="Generated\WinTab_车队级调度_转关箱预排车_监管车辆及作业状况.cs" />
+    <Compile Include="Generated\WinTab_车队级调度_静态任务下达_单车后续作业计划_专家任务.cs" />
+    <Compile Include="Generated\WinTab_车队级调度_静态任务下达_待命车辆_单车单任务.cs" />
+    <Compile Include="Generated\WinTab_车队级调度_静态任务下达_待命车辆_单车多任务.cs" />
+    <Compile Include="Generated\WinTab_车队级调度_静态任务下达_待排任务.cs" />
+    <Compile Include="Service\EntityContext.cs" />
+    <Compile Include="Service\EntityDataService.svc.cs">
+      <DependentUpon>EntityDataService.svc</DependentUpon>
+    </Compile>
+    <Content Include="App_Code\MembershipUserODS.cs" />
+    <Content Include="App_Code\MembershipUserWrapper.cs" />
+    <Content Include="App_Code\RoleDataObject.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Membership\MembershipManage.aspx.cs">
+      <DependentUpon>MembershipManage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Membership\MembershipManage.aspx.designer.cs">
+      <DependentUpon>MembershipManage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Membership\Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Generated\web.config.include" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>44447</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost/Zkzx</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

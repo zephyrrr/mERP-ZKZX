@@ -1,0 +1,40 @@
+OUTPUT MapImportant;
+DATASET "MapImportant";
+COPYRIGHT "(c) 2012 Feng" ;
+COUNTRY "China";
+NAMESPACE chn;
+UNITS Metric;
+REGIONS ["China"];
+
+IMPORT POLYGONS [
+	ID = %Id,
+	LABEL = %NAME,
+	ABBREV = %NAME,
+	LANG = "CHN",
+	TYPE = 8
+] FROM  "E:\MySource\nbzs\wlxt\trunk\Zkzx\Zkzx.Run\map\temp\Didian.shp@@936";
+COMMIT;
+
+IMPORT STREETS [
+	ID = %Id,
+	AR_AUTO = "Y",
+	BASENAME = %NAME,
+	NAME = %NAME,
+	LADDRSCH = "M",
+	L_REGION 1 = "China",
+	LNREFADDR = "",
+	LREFADDR = "",
+	LPOSTCODE = "315000",
+	RADDRSCH = "M",
+	R_REGION 2 = "China",
+	RNREFADDR = "",
+	RREFADDR = "",
+	RPOSTCODE = "315000",
+	TYP_AFT = "",
+	TYP_BEF = "",
+	NM_PREF = "",
+	NM_SUFF = "",
+	POSTALNAME = "N",
+	ROUNDABOUT = "N"
+] FROM "E:\MySource\nbzs\wlxt\trunk\Zkzx\Zkzx.Run\map\temp\Lilunluxian.shp@@936";
+COMMIT;

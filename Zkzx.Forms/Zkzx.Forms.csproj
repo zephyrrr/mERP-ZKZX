@@ -1,0 +1,582 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{2EF349A3-CC53-4167-A777-82B40A1586B6}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Zkzx.Forms</RootNamespace>
+    <AssemblyName>Zkzx.Forms</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\Reference\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Feng.Base" />
+    <Reference Include="Feng.Controller" />
+    <Reference Include="Feng.Dao" />
+    <Reference Include="Feng.Data" />
+    <Reference Include="Feng.Grid" />
+    <Reference Include="Feng.Map" />
+    <Reference Include="Feng.Model" />
+    <Reference Include="Feng.Net" />
+    <Reference Include="Feng.NH" />
+    <Reference Include="Feng.View" />
+    <Reference Include="Feng.Windows" />
+    <Reference Include="Feng.Windows.Application" />
+    <Reference Include="Feng.Windows.Controller" />
+    <Reference Include="Feng.Windows.Forms" />
+    <Reference Include="Hd.NetRead" />
+    <Reference Include="Newtonsoft.Json" />
+    <Reference Include="NHibernate" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Xceed.Grid.v3.9" />
+    <Reference Include="Xceed.Editors.v2.6" />
+    <Reference Include="Xceed.UI.v1.4" />
+    <Reference Include="Xceed.Validation.v1.3" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Helper.cs" />
+    <Compile Include="MyButtonsMainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="专家调度\动态\专家调度一级动态优化小箱配对.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="专家调度\动态\专家调度一级动态优化小箱配对.Designer.cs">
+      <DependentUpon>专家调度一级动态优化小箱配对.cs</DependentUpon>
+    </Compile>
+    <Compile Include="专家调度\动态\专家调度一级动态优化出口箱带货.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="专家调度\动态\专家调度一级动态优化出口箱带货.Designer.cs">
+      <DependentUpon>专家调度一级动态优化出口箱带货.cs</DependentUpon>
+    </Compile>
+    <Compile Include="专家调度\动态\专家调度一级动态优化进口箱带货.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="专家调度\动态\专家调度一级动态优化进口箱带货.Designer.cs">
+      <DependentUpon>专家调度一级动态优化进口箱带货.cs</DependentUpon>
+    </Compile>
+    <Compile Include="专家调度\动态\专家调度一级动态优化.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="专家调度\动态\专家调度一级动态优化.Designer.cs">
+      <DependentUpon>专家调度一级动态优化.cs</DependentUpon>
+    </Compile>
+    <Compile Include="专家调度\静态\专家调度一级静态优化.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="专家调度\静态\专家调度一级静态优化.Designer.cs">
+      <DependentUpon>专家调度一级静态优化.cs</DependentUpon>
+    </Compile>
+    <Compile Include="专家调度\静态\专家调度一级静态优化小箱配对.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="专家调度\静态\专家调度一级静态优化小箱配对.Designer.cs">
+      <DependentUpon>专家调度一级静态优化小箱配对.cs</DependentUpon>
+    </Compile>
+    <Compile Include="专家调度\静态\专家调度一级静态优化出口箱带货.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="专家调度\静态\专家调度一级静态优化出口箱带货.Designer.cs">
+      <DependentUpon>专家调度一级静态优化出口箱带货.cs</DependentUpon>
+    </Compile>
+    <Compile Include="专家调度\静态\专家调度一级静态优化进口箱带货.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="专家调度\静态\专家调度一级静态优化进口箱带货.Designer.cs">
+      <DependentUpon>专家调度一级静态优化进口箱带货.cs</DependentUpon>
+    </Compile>
+    <Compile Include="专家调度\静态\专家调度一级静态优化套箱.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="专家调度\静态\专家调度一级静态优化套箱.Designer.cs">
+      <DependentUpon>专家调度一级静态优化套箱.cs</DependentUpon>
+    </Compile>
+    <Compile Include="任务备案\任务确认\备案确认情况查询.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="任务备案\任务确认\备案确认情况查询.Designer.cs">
+      <DependentUpon>备案确认情况查询.cs</DependentUpon>
+    </Compile>
+    <Compile Include="任务备案\任务预备案\预录入任务详细信息.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="任务备案\任务预备案\预录入任务详细信息.Designer.cs">
+      <DependentUpon>预录入任务详细信息.cs</DependentUpon>
+    </Compile>
+    <Compile Include="实时监控\作业开始结束.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="实时监控\作业开始结束.Designer.cs">
+      <DependentUpon>作业开始结束.cs</DependentUpon>
+    </Compile>
+    <Compile Include="实时监控\任务承运状况.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="实时监控\任务承运状况.Designer.cs">
+      <DependentUpon>任务承运状况.cs</DependentUpon>
+    </Compile>
+    <Compile Include="任务备案\任务预备案\任务预录入主界面.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="任务备案\任务预备案\任务预录入主界面.Designer.cs">
+      <DependentUpon>任务预录入主界面.cs</DependentUpon>
+    </Compile>
+    <Compile Include="专家调度\专家级调度主界面.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="专家调度\专家级调度主界面.Designer.cs">
+      <DependentUpon>专家级调度主界面.cs</DependentUpon>
+    </Compile>
+    <Compile Include="专家调度\专家级主界面.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="专家调度\专家级主界面.Designer.cs">
+      <DependentUpon>专家级主界面.cs</DependentUpon>
+    </Compile>
+    <Compile Include="车队调度\车辆报停启用登记.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="车队调度\车辆报停启用登记.Designer.cs">
+      <DependentUpon>车辆报停启用登记.cs</DependentUpon>
+    </Compile>
+    <Compile Include="车队调度\车队级调度主界面.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="车队调度\车队级调度主界面.Designer.cs">
+      <DependentUpon>车队级调度主界面.cs</DependentUpon>
+    </Compile>
+    <Compile Include="任务备案\任务确认\备案确认主界面.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="任务备案\任务确认\备案确认主界面.Designer.cs">
+      <DependentUpon>备案确认主界面.cs</DependentUpon>
+    </Compile>
+    <Compile Include="实时监控\实时监控对话框\实时监控作业退回申请.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="实时监控\实时监控对话框\实时监控作业退回申请.Designer.cs">
+      <DependentUpon>实时监控作业退回申请.cs</DependentUpon>
+    </Compile>
+    <Compile Include="实时监控\实时监控主界面.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="实时监控\实时监控主界面.Designer.cs">
+      <DependentUpon>实时监控主界面.cs</DependentUpon>
+    </Compile>
+    <Compile Include="实时监控\电子作业单.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="实时监控\电子作业单.Designer.cs">
+      <DependentUpon>电子作业单.cs</DependentUpon>
+    </Compile>
+    <Compile Include="实时监控\实时监控对话框\实时监控异常报警.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="实时监控\实时监控对话框\实时监控异常报警.Designer.cs">
+      <DependentUpon>实时监控异常报警.cs</DependentUpon>
+    </Compile>
+    <Compile Include="实时监控\承运时间要求详情.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="实时监控\承运时间要求详情.Designer.cs">
+      <DependentUpon>承运时间要求详情.cs</DependentUpon>
+    </Compile>
+    <Compile Include="实时监控\监控级调度主界面.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="实时监控\监控级调度主界面.Designer.cs">
+      <DependentUpon>监控级调度主界面.cs</DependentUpon>
+    </Compile>
+    <Compile Include="专家调度\动态\专家调度一级动态优化套箱.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="专家调度\动态\专家调度一级动态优化套箱.Designer.cs">
+      <DependentUpon>专家调度一级动态优化套箱.cs</DependentUpon>
+    </Compile>
+    <Compile Include="专家调度\专家调度静态任务下达.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="专家调度\专家调度静态任务下达.Designer.cs">
+      <DependentUpon>专家调度静态任务下达.cs</DependentUpon>
+    </Compile>
+    <Compile Include="任务备案\任务确认\任务确认详细信息.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="任务备案\任务确认\任务确认详细信息.Designer.cs">
+      <DependentUpon>任务确认详细信息.cs</DependentUpon>
+    </Compile>
+    <Compile Include="任务备案\任务确认\任务备案确认列表方式.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="任务备案\任务确认\任务备案确认列表方式.Designer.cs">
+      <DependentUpon>任务备案确认列表方式.cs</DependentUpon>
+    </Compile>
+    <Compile Include="任务备案\任务确认\任务备案确认主界面.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="任务备案\任务确认\任务备案确认主界面.Designer.cs">
+      <DependentUpon>任务备案确认主界面.cs</DependentUpon>
+    </Compile>
+    <Compile Include="任务备案\任务预备案\任务预备案.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="任务备案\任务预备案\任务预备案.Designer.cs">
+      <DependentUpon>任务预备案.cs</DependentUpon>
+    </Compile>
+    <Compile Include="实时监控\作业过程监控.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="实时监控\作业过程监控.Designer.cs">
+      <DependentUpon>作业过程监控.cs</DependentUpon>
+    </Compile>
+    <Compile Include="实时监控\单个作业监控详情.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="实时监控\单个作业监控详情.Designer.cs">
+      <DependentUpon>单个作业监控详情.cs</DependentUpon>
+    </Compile>
+    <Compile Include="实时监控\单车后续作业计划.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="实时监控\单车后续作业计划.Designer.cs">
+      <DependentUpon>单车后续作业计划.cs</DependentUpon>
+    </Compile>
+    <Compile Include="任务备案\备案明细窗体.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="任务备案\备案明细窗体.Designer.cs">
+      <DependentUpon>备案明细窗体.cs</DependentUpon>
+    </Compile>
+    <Compile Include="专家调度\紧急下达.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="专家调度\紧急下达.Designer.cs">
+      <DependentUpon>紧急下达.cs</DependentUpon>
+    </Compile>
+    <Compile Include="实时监控\虚拟手机终端.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="实时监控\虚拟手机终端.Designer.cs">
+      <DependentUpon>虚拟手机终端.cs</DependentUpon>
+    </Compile>
+    <Compile Include="车队调度\车辆详细信息.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="车队调度\车辆详细信息.Designer.cs">
+      <DependentUpon>车辆详细信息.cs</DependentUpon>
+    </Compile>
+    <Compile Include="车队调度\车队调度静态优化派车.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="车队调度\车队调度静态优化派车.Designer.cs">
+      <DependentUpon>车队调度静态优化派车.cs</DependentUpon>
+    </Compile>
+    <Compile Include="车队调度\车队调度设置作业备注.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="车队调度\车队调度设置作业备注.Designer.cs">
+      <DependentUpon>车队调度设置作业备注.cs</DependentUpon>
+    </Compile>
+    <Compile Include="车队调度\转关箱预排车.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="车队调度\转关箱预排车.Designer.cs">
+      <DependentUpon>转关箱预排车.cs</DependentUpon>
+    </Compile>
+    <Compile Include="任务备案\任务确认\进口箱批量任务确认.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="任务备案\任务确认\进口箱批量任务确认.Designer.cs">
+      <DependentUpon>进口箱批量任务确认.cs</DependentUpon>
+    </Compile>
+    <Compile Include="实时监控\实时监控对话框\实时监控开始.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="实时监控\实时监控对话框\实时监控开始.Designer.cs">
+      <DependentUpon>实时监控开始.cs</DependentUpon>
+    </Compile>
+    <Compile Include="实时监控\实时监控对话框\实时监控异常处理动态任务追加.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="实时监控\实时监控对话框\实时监控异常处理动态任务追加.Designer.cs">
+      <DependentUpon>实时监控异常处理动态任务追加.cs</DependentUpon>
+    </Compile>
+    <Compile Include="实时监控\实时监控对话框\实时监控异常处理.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="实时监控\实时监控对话框\实时监控异常处理.Designer.cs">
+      <DependentUpon>实时监控异常处理.cs</DependentUpon>
+    </Compile>
+    <Compile Include="实时监控\实时监控对话框\实时监控经过地名时间.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="实时监控\实时监控对话框\实时监控经过地名时间.Designer.cs">
+      <DependentUpon>实时监控经过地名时间.cs</DependentUpon>
+    </Compile>
+    <Compile Include="实时监控\实时监控对话框\实时监控结束.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="实时监控\实时监控对话框\实时监控结束.Designer.cs">
+      <DependentUpon>实时监控结束.cs</DependentUpon>
+    </Compile>
+    <Compile Include="任务备案\任务确认\拒绝原因.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="任务备案\任务确认\拒绝原因.Designer.cs">
+      <DependentUpon>拒绝原因.cs</DependentUpon>
+    </Compile>
+    <Compile Include="车队调度\车队调度主界面.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="车队调度\车队调度主界面.Designer.cs">
+      <DependentUpon>车队调度主界面.cs</DependentUpon>
+    </Compile>
+    <Compile Include="车队调度\车队调度动态优化派车.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="车队调度\车队调度静态任务下达.Designer.cs">
+      <DependentUpon>车队调度动态优化派车.cs</DependentUpon>
+    </Compile>
+    <Compile Include="任务备案\任务预备案\进口箱批量任务录入.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="任务备案\任务预备案\进口箱批量任务录入.Designer.cs">
+      <DependentUpon>进口箱批量任务录入.cs</DependentUpon>
+    </Compile>
+    <Compile Include="任务备案\任务预备案\预录入发送后情况查询.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="任务备案\任务预备案\预录入发送后情况查询.Designer.cs">
+      <DependentUpon>预录入发送后情况查询.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="专家调度\动态\专家调度一级动态优化小箱配对.resx">
+      <DependentUpon>专家调度一级动态优化小箱配对.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="专家调度\动态\专家调度一级动态优化出口箱带货.resx">
+      <DependentUpon>专家调度一级动态优化出口箱带货.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="专家调度\动态\专家调度一级动态优化进口箱带货.resx">
+      <DependentUpon>专家调度一级动态优化进口箱带货.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="专家调度\动态\专家调度一级动态优化.resx">
+      <DependentUpon>专家调度一级动态优化.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="专家调度\静态\专家调度一级静态优化.resx">
+      <DependentUpon>专家调度一级静态优化.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="专家调度\静态\专家调度一级静态优化小箱配对.resx">
+      <DependentUpon>专家调度一级静态优化小箱配对.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="专家调度\静态\专家调度一级静态优化出口箱带货.resx">
+      <DependentUpon>专家调度一级静态优化出口箱带货.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="专家调度\静态\专家调度一级静态优化进口箱带货.resx">
+      <DependentUpon>专家调度一级静态优化进口箱带货.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="专家调度\静态\专家调度一级静态优化套箱.resx">
+      <DependentUpon>专家调度一级静态优化套箱.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="专家调度\动态\专家调度一级动态优化套箱.resx">
+      <DependentUpon>专家调度一级动态优化套箱.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="专家调度\专家调度静态任务下达.resx">
+      <DependentUpon>专家调度静态任务下达.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="任务备案\任务确认\备案确认情况查询.resx">
+      <DependentUpon>备案确认情况查询.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="任务备案\任务确认\任务确认详细信息.resx">
+      <DependentUpon>任务确认详细信息.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="任务备案\任务确认\任务备案确认列表方式.resx">
+      <DependentUpon>任务备案确认列表方式.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="任务备案\任务确认\任务备案确认主界面.resx">
+      <DependentUpon>任务备案确认主界面.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="任务备案\任务预备案\预录入任务详细信息.resx">
+      <DependentUpon>预录入任务详细信息.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="任务备案\任务预备案\任务预备案.resx">
+      <DependentUpon>任务预备案.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="实时监控\作业过程监控.resx">
+      <DependentUpon>作业过程监控.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="实时监控\作业开始结束.resx">
+      <DependentUpon>作业开始结束.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="实时监控\任务承运状况.resx">
+      <DependentUpon>任务承运状况.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="任务备案\任务预备案\任务预录入主界面.resx">
+      <DependentUpon>任务预录入主界面.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="专家调度\专家级调度主界面.resx">
+      <DependentUpon>专家级调度主界面.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="专家调度\专家级主界面.resx">
+      <DependentUpon>专家级主界面.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="车队调度\车辆报停启用登记.resx">
+      <DependentUpon>车辆报停启用登记.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="车队调度\车队级调度主界面.resx">
+      <DependentUpon>车队级调度主界面.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="实时监控\实时监控对话框\实时监控作业退回申请.resx">
+      <DependentUpon>实时监控作业退回申请.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="实时监控\实时监控主界面.resx">
+      <DependentUpon>实时监控主界面.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="实时监控\电子作业单.resx">
+      <DependentUpon>电子作业单.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="实时监控\单个作业监控详情.resx">
+      <DependentUpon>单个作业监控详情.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="实时监控\单车后续作业计划.resx">
+      <DependentUpon>单车后续作业计划.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="任务备案\备案明细窗体.resx">
+      <DependentUpon>备案明细窗体.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="实时监控\实时监控对话框\实时监控异常报警.resx">
+      <DependentUpon>实时监控异常报警.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="实时监控\承运时间要求详情.resx">
+      <DependentUpon>承运时间要求详情.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="实时监控\监控级调度主界面.resx">
+      <DependentUpon>监控级调度主界面.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="专家调度\紧急下达.resx">
+      <DependentUpon>紧急下达.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="实时监控\虚拟手机终端.resx">
+      <DependentUpon>虚拟手机终端.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="车队调度\车辆详细信息.resx">
+      <DependentUpon>车辆详细信息.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="车队调度\车队调度动态优化派车.resx">
+      <DependentUpon>车队调度动态优化派车.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="车队调度\车队调度静态优化派车.resx">
+      <DependentUpon>车队调度静态优化派车.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="车队调度\车队调度设置作业备注.resx">
+      <DependentUpon>车队调度设置作业备注.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="车队调度\转关箱预排车.resx">
+      <DependentUpon>转关箱预排车.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="任务备案\任务确认\进口箱批量任务确认.resx">
+      <DependentUpon>进口箱批量任务确认.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="实时监控\实时监控对话框\实时监控开始.resx">
+      <DependentUpon>实时监控开始.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="实时监控\实时监控对话框\实时监控异常处理动态任务追加.resx">
+      <DependentUpon>实时监控异常处理动态任务追加.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="实时监控\实时监控对话框\实时监控异常处理.resx">
+      <DependentUpon>实时监控异常处理.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="实时监控\实时监控对话框\实时监控经过地名时间.resx">
+      <DependentUpon>实时监控经过地名时间.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="实时监控\实时监控对话框\实时监控结束.resx">
+      <DependentUpon>实时监控结束.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="任务备案\任务确认\拒绝原因.resx">
+      <DependentUpon>拒绝原因.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="车队调度\车队调度主界面.resx">
+      <DependentUpon>车队调度主界面.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="任务备案\任务预备案\进口箱批量任务录入.resx">
+      <DependentUpon>进口箱批量任务录入.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="任务备案\任务预备案\预录入发送后情况查询.resx">
+      <DependentUpon>预录入发送后情况查询.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Images\已确认.png" />
+    <EmbeddedResource Include="Images\等待确认.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Images\Logo.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\zkzx.Model.Dao\Zkzx.Model.Dao.csproj">
+      <Project>{EAC595E3-2389-420E-876B-6C6A93E42446}</Project>
+      <Name>Zkzx.Model.Dao</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Zkzx.Model\Zkzx.Model.csproj">
+      <Project>{45682B3C-A5FF-4365-9AB0-0B9DDC52A4A5}</Project>
+      <Name>Zkzx.Model</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Images\ok.png" />
+    <EmbeddedResource Include="Images\开始.png" />
+    <EmbeddedResource Include="Images\暂停.png" />
+    <EmbeddedResource Include="Images\移出.png" />
+    <EmbeddedResource Include="Images\结束.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Images\调整.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Images\cancel.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Images\exclamation.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

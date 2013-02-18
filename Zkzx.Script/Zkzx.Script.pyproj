@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{be5f11a7-2f86-4122-948f-696b0549852a}</ProjectGuid>
+    <ProjectHome>.</ProjectHome>
+    <StartupFile>
+    </StartupFile>
+    <SearchPath>
+    </SearchPath>
+    <WorkingDirectory>
+    </WorkingDirectory>
+    <OutputPath>.</OutputPath>
+    <Name>Zkzx.Script</Name>
+    <RootNamespace>Zkzx.Script</RootNamespace>
+    <IsWindowsApplication>False</IsWindowsApplication>
+    <InterpreterId>93d92e53-7496-42d2-b902-0b95fdee27e9</InterpreterId>
+    <InterpreterVersion>2.6</InterpreterVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <DebugSymbols>true</DebugSymbols>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <DebugSymbols>true</DebugSymbols>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="AdminScript\E带货任务备案.py" />
+    <Compile Include="AdminScript\I带货任务备案.py" />
+    <Compile Include="AdminScript\任务备案_Func.py" />
+    <Compile Include="AdminScript\全部备案.py" />
+    <Compile Include="AdminScript\出口任务备案-小箱.py" />
+    <Compile Include="AdminScript\出口任务备案.py" />
+    <Compile Include="AdminScript\进口任务备案-小箱.py" />
+    <Compile Include="AdminScript\进口任务备案.py" />
+    <Compile Include="FormTest.py" />
+    <Compile Include="专家任务管理.py" />
+    <Compile Include="专家级调度_任务号.py" />
+    <Compile Include="专家调度静态任务分配_默认区域.py" />
+    <Compile Include="任务管理.py" />
+    <Compile Include="作业实时监控_起始途径终止地.py" />
+    <Compile Include="生成REST服务代码.py" />
+    <Compile Include="生成理论路线.py" />
+    <Compile Include="车辆状态更新.py" />
+    <Compile Include="车队级调度_静态任务下达_可派车时间.py" />
+    <Compile Include="车队级调度_静态任务下达_后续作业计划.py" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="AdminScript\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.Common.targets" />
+</Project>

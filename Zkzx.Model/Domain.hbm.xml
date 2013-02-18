@@ -1,0 +1,398 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<hibernate-mapping namespace="Zkzx.Model" assembly="Zkzx.Model" xmlns="urn:nhibernate-mapping-2.2">
+  <class name="转关箱排车暂存组" table="业务备案_转关箱排车暂存组">
+    <id name="ID" column="Id">
+      <generator class="guid.comb" />
+    </id>
+    <version name="Version" column="Version" type="Int32" unsaved-value="0" />
+    <property name="预排时间" not-null="true" />
+    <property name="CreatedBy" length="20" not-null="true" />
+    <property name="Created" not-null="true" />
+    <property name="UpdatedBy" length="20" not-null="false" />
+    <property name="Updated" not-null="false" />
+    <property name="IsActive" not-null="true" />
+    <property name="ClientId" not-null="true" />
+    <property name="OrgId" not-null="true" />
+    <bag name="转关箱排车" inverse="true" cascade="none">
+      <key column="暂存组" />
+      <one-to-many class="Zkzx.Model.转关箱排车计划, Zkzx.Model" not-found="ignore" />
+    </bag>
+  </class>
+  <class name="Zkzx.Model.网上委托任务, Zkzx.Model" table="网上委托_任务" optimistic-lock="version">
+    <id name="ID" column="Id">
+      <generator class="guid.comb" />
+    </id>
+    <version name="Version" column="Version" type="Int32" unsaved-value="0" />
+    <property name="任务来源" not-null="true" />
+    <property name="预录入号" length="12" not-null="false" />
+    <property name="任务号" length="12" />
+    <property name="任务性质" not-null="false" />
+    <property name="是否小箱" not-null="false" />
+    <property name="转关箱标志" not-null="false" />
+    <property name="委托人编号" column="委托人" length="6" not-null="false" />
+    <property name="委托时间" not-null="false" />
+    <property name="委托联系人" length="255" />
+    <property name="箱号" length="12" not-null="false" />
+    <property name="箱型编号" column="箱型" not-null="false" />
+    <property name="箱属船公司编号" column="箱属船公司" length="6" not-null="false" />
+    <property name="封志号" length="50" not-null="false" />
+    <property name="货名" length="50" not-null="false" />
+    <property name="货物特征" length="50" not-null="false" />
+    <property name="价值" not-null="false" />
+    <property name="重量" not-null="false" />
+    <property name="提箱点编号" column="提箱点" length="6" not-null="false" />
+    <property name="提箱时间要求" not-null="false" />
+    <property name="还箱进港点编号" column="还箱进港点" length="6" not-null="false" />
+    <property name="还箱进港时间要求" not-null="false" />
+    <property name="装货地编号" column="装货地" length="6" not-null="false" />
+    <property name="装货时间要求始" not-null="false" />
+    <property name="装货时间要求止" not-null="false" />
+    <property name="装货联系人" length="50" not-null="false" />
+    <property name="装货联系手机" length="50" not-null="false" />
+    <property name="装货联系座机" length="50" not-null="false" />
+    <property name="卸货地编号" column="卸货地" length="6" not-null="false" />
+    <property name="卸货时间要求始" not-null="false" />
+    <property name="卸货时间要求止" not-null="false" />
+    <property name="卸货联系人" length="50" not-null="false" />
+    <property name="卸货联系手机" length="50" not-null="false" />
+    <property name="卸货联系座机" length="50" not-null="false" />
+    <property name="备注" length="255" not-null="false" />
+    <property name="船名" length="50" not-null="false" />
+    <property name="航次" length="50" not-null="false" />
+    <property name="提单号" length="50" not-null="false" />
+    <property name="提示性箱号" length="12" not-null="false" />
+    <property name="是否受理" not-null="true" />
+    <property name="CreatedBy" length="20" not-null="true" />
+    <property name="Created" not-null="true" />
+    <property name="UpdatedBy" length="20" not-null="false" />
+    <property name="Updated" not-null="false" />
+    <property name="IsActive" not-null="true" />
+    <property name="ClientId" not-null="true" />
+    <property name="OrgId" not-null="true" />
+  </class>
+  <class name="Zkzx.Model.动作时间数据, Zkzx.Model" table="业务作业_动作时间数据" optimistic-lock="version">
+    <id name="ID" column="Id">
+      <generator class="guid.comb" />
+    </id>
+    <version name="Version" column="Version" type="Int32" unsaved-value="0" />
+    <property name="时间" not-null="true" />
+    <property name="地点" length="50" not-null="true" />
+    <property name="动作" length="50" not-null="true" />
+    <property name="CreatedBy" length="20" not-null="true" />
+    <property name="Created" not-null="true" />
+    <property name="UpdatedBy" length="20" not-null="false" />
+    <property name="Updated" not-null="false" />
+    <property name="IsActive" not-null="true" />
+    <property name="ClientId" not-null="true" />
+    <property name="OrgId" not-null="true" />
+    <many-to-one name="车辆作业" not-null="true" foreign-key="FK_动作时间数据_车辆作业" />
+  </class>
+  <class name="Zkzx.Model.人员, Zkzx.Model" table="参数备案_人员单位" optimistic-lock="version">
+    <id name="编号" length="6">
+      <generator class="assigned" />
+    </id>
+    <version name="Version" column="Version" type="Int32" unsaved-value="0" />
+    <property name="简称" length="20" not-null="true" unique="true" unique-key="UK_人员_简称" />
+    <property name="全称" length="50" not-null="true" unique="true" unique-key="UK_人员_全称" />
+    <property name="角色用途" length="100" />
+    <property name="业务类型" length="100" />
+    <property name="字母简称" length="20" />
+    <property name="联系方式" length="200" />
+    <property name="所在地" length="20" />
+    <property name="备注" length="200" />
+    <property name="CreatedBy" length="20" not-null="true" />
+    <property name="Created" not-null="true" />
+    <property name="UpdatedBy" length="20" not-null="false" />
+    <property name="Updated" not-null="false" />
+    <property name="IsActive" not-null="true" />
+    <property name="ClientId" not-null="true" />
+    <property name="OrgId" not-null="true" />
+  </class>
+  <class name="Zkzx.Model.最新作业状态, Zkzx.Model" schema-action="none" table="视图_车辆作业_最新状态" mutable="false">
+    <id name="Id" column="Id" />
+    <property name="车辆区域" length="50" not-null="false" />
+    <property name="车辆道路" length="50" not-null="false" />
+    <property name="车辆重要区域" length="50" not-null="false" />
+    <property name="车辆规划道路" length="50" not-null="false" />
+    <property name="作业地点" length="50" not-null="false" />
+    <property name="任务进程" length="50" not-null="false" />
+    <property name="作业状态" length="50" not-null="false" />
+    <property name="作业进程序号" not-null="true" />
+    <property name="预计到达时间" not-null="false" />
+    <property name="作业监控Id" not-null="false" />
+    <property name="异常情况" length="50" not-null="false" />
+    <property name="异常参数" length="255" not-null="false" />
+    <property name="处理状态" length="50" not-null="false" />
+    <property name="作业异常Id" not-null="false" />
+  </class>
+  <class name="进口票" table="业务备案_进口票">
+    <id name="ID" column="Id">
+      <generator class="guid.comb" />
+    </id>
+    <version name="Version" column="Version" type="Int32" unsaved-value="0" />
+    <property name="任务性质" not-null="true" />
+    <property name="转关箱标志" not-null="true" />
+    <property name="委托人编号" column="委托人" length="6" not-null="false" />
+    <property name="委托时间" not-null="false" />
+    <property name="委托联系人" length="255" not-null="false" />
+    <property name="总箱量" length="20" not-null="false" />
+    <property name="提单号" length="50" not-null="false" />
+    <property name="提示性箱号" length="12" not-null="false" />
+    <property name="船名" length="50" not-null="false" />
+    <property name="航次" length="50" not-null="false" />
+    <property name="备注" length="255" not-null="false" />
+    <property name="箱属船公司编号" column="箱属船公司" length="6" not-null="false" />
+    <property name="提箱时间要求" not-null="false" />
+    <property name="还箱进港时间要求" not-null="false" />
+    <property name="CreatedBy" length="20" not-null="true" />
+    <property name="Created" not-null="true" />
+    <property name="UpdatedBy" length="20" not-null="false" />
+    <property name="Updated" not-null="false" />
+    <property name="IsActive" not-null="true" />
+    <property name="ClientId" not-null="true" />
+    <property name="OrgId" not-null="true" />
+    <bag name="任务" lazy="false" inverse="true" cascade="none">
+      <key column="票" />
+      <one-to-many class="Zkzx.Model.任务, Zkzx.Model" not-found="ignore" />
+    </bag>
+  </class>
+  <class name="Zkzx.Model.专家任务, Zkzx.Model" table="业务备案_专家任务" optimistic-lock="version">
+    <id name="ID" column="Id">
+      <generator class="guid.comb" />
+    </id>
+    <version name="Version" column="Version" type="Int32" unsaved-value="0" />
+    <property name="新任务号" length="13" not-null="true" unique="true" />
+    <property name="任务性质" not-null="true" />
+    <property name="区域编号" column="区域" length="6" not-null="false" />
+    <property name="备注" length="500" not-null="false" />
+    <property name="时间要求始Original" column="时间要求始" not-null="false" />
+    <property name="时间要求止Original" column="时间要求止" not-null="false" />
+    <property name="缓急程度" not-null="true" />
+    <property name="下达时间" not-null="false" />
+    <property name="CreatedBy" length="20" not-null="true" />
+    <property name="Created" not-null="true" />
+    <property name="UpdatedBy" length="20" not-null="false" />
+    <property name="Updated" not-null="false" />
+    <property name="IsActive" not-null="true" />
+    <property name="ClientId" not-null="true" />
+    <property name="OrgId" not-null="true" />
+    <many-to-one name="车辆作业" not-null="false" foreign-key="FK_专家任务_车辆作业" />
+    <bag name="任务" lazy="false" inverse="true" cascade="none" order-by="任务性质">
+      <key column="专家任务" />
+      <one-to-many class="Zkzx.Model.任务, Zkzx.Model" not-found="ignore" />
+    </bag>
+  </class>
+  <class name="Zkzx.Model.车辆, Zkzx.Model" table="参数备案_车辆" optimistic-lock="version">
+    <id name="ID" column="Id">
+      <generator class="guid.comb" />
+    </id>
+    <version name="Version" column="Version" type="Int32" unsaved-value="0" />
+    <property name="车牌号" length="20" not-null="true" />
+    <property name="车型" length="20" not-null="true" />
+    <property name="核定载重" length="20" not-null="true" />
+    <property name="车主编号" column="车主" length="6" not-null="false" />
+    <property name="主驾驶员编号" column="主驾驶员" length="6" not-null="false" />
+    <property name="所属车队编号" column="所属车队" length="6" not-null="false" />
+    <property name="车辆忠诚度" not-null="true" />
+    <property name="车况" length="20" not-null="true" />
+    <property name="是否监管车" not-null="true" />
+    <property name="当前状态" not-null="true" />
+    <property name="状态时间起" not-null="true" />
+    <property name="状态时间止" not-null="false" />
+    <property name="备注" length="500" not-null="false" />
+    <property name="车载Id号" column="车载Id号" length="7" not-null="false" />
+    <property name="CreatedBy" length="20" not-null="true" />
+    <property name="Created" not-null="true" />
+    <property name="UpdatedBy" length="20" not-null="false" />
+    <property name="Updated" not-null="false" />
+    <property name="IsActive" not-null="true" />
+    <property name="ClientId" not-null="true" />
+    <property name="OrgId" not-null="true" />
+    <many-to-one name="车主" not-null="false" update="false" insert="false" foreign-key="FK_车辆_车主" />
+    <many-to-one name="主驾驶员" not-null="false" update="false" insert="false" foreign-key="FK_车辆_主驾驶员" />
+    <many-to-one name="所属车队" not-null="false" update="false" insert="false" foreign-key="FK_车辆_所属车队" />
+  </class>
+  <class name="转关箱排车计划" table="业务备案_转关箱排车计划">
+    <id name="ID" column="Id">
+      <generator class="guid.comb" />
+    </id>
+    <version name="Version" column="Version" type="Int32" unsaved-value="0" />
+    <property name="任务号" not-null="true" />
+    <property name="天数序号" not-null="true" />
+    <property name="日期" not-null="false" />
+    <property name="CreatedBy" length="20" not-null="true" />
+    <property name="Created" not-null="true" />
+    <property name="UpdatedBy" length="20" not-null="false" />
+    <property name="Updated" not-null="false" />
+    <property name="IsActive" not-null="true" />
+    <property name="ClientId" not-null="true" />
+    <property name="OrgId" not-null="true" />
+    <many-to-one name="暂存组" column="暂存组" not-null="false" cascade="none" foreign-key="FK_转关箱排车计划_暂存组" />
+    <many-to-one name="车辆" not-null="true" foreign-key="FK_转关箱排车计划_车辆" />
+  </class>
+  <class name="Zkzx.Model.作业监控状态, Zkzx.Model" table="业务作业_监控状态" optimistic-lock="version">
+    <id name="ID" column="Id">
+      <generator class="identity" />
+    </id>
+    <version name="Version" column="Version" type="Int32" unsaved-value="0" />
+    <property name="时间" not-null="true" />
+    <property name="车辆区域" length="50" not-null="false" />
+    <property name="车辆道路" length="50" not-null="false" />
+    <property name="车辆重要区域" length="50" not-null="false" />
+    <property name="车辆规划道路" length="50" not-null="false" />
+    <property name="作业地点" length="50" not-null="false" />
+    <property name="任务进程" length="50" not-null="true" />
+    <property name="作业状态" length="50" not-null="true" />
+    <property name="作业进程序号" not-null="true" />
+    <property name="预计到达时间" not-null="false" />
+    <property name="GpsData" not-null="false" />
+    <property name="CreatedBy" length="20" not-null="true" />
+    <property name="Created" not-null="true" />
+    <property name="UpdatedBy" length="20" not-null="false" />
+    <property name="Updated" not-null="false" />
+    <property name="IsActive" not-null="true" />
+    <property name="ClientId" not-null="true" />
+    <property name="OrgId" not-null="true" />
+    <many-to-one name="车辆作业" not-null="true" foreign-key="FK_监控状态_车辆作业" />
+  </class>
+  <class name="Zkzx.Model.任务, Zkzx.Model" table="业务备案_任务" optimistic-lock="version">
+    <id name="ID" column="Id">
+      <generator class="guid.comb" />
+    </id>
+    <version name="Version" column="Version" type="Int32" unsaved-value="0" />
+    <property name="任务来源" not-null="true" />
+    <property name="预录入号" length="12" not-null="false" />
+    <property name="任务号" length="12" />
+    <property name="任务性质" not-null="false" />
+    <property name="是否小箱" not-null="false" />
+    <property name="转关箱标志" not-null="false" />
+    <property name="委托人编号" column="委托人" length="6" not-null="false" />
+    <property name="委托时间" not-null="false" />
+    <property name="委托联系人" length="255" />
+    <property name="箱号" length="12" not-null="false" index="Idx_任务_箱号" />
+    <property name="箱型编号" column="箱型" not-null="false" />
+    <property name="箱属船公司编号" column="箱属船公司" length="6" not-null="false" />
+    <property name="封志号" length="50" not-null="false" />
+    <property name="货名" length="50" not-null="false" />
+    <property name="货物特征" length="50" not-null="false" />
+    <property name="价值" not-null="false" />
+    <property name="重量" not-null="false" />
+    <property name="提箱点编号" column="提箱点" length="6" not-null="false" />
+    <property name="提箱时间要求" not-null="false" />
+    <property name="还箱进港点编号" column="还箱进港点" length="6" not-null="false" />
+    <property name="还箱进港时间要求" not-null="false" />
+    <property name="装货地编号" column="装货地" length="6" not-null="false" />
+    <property name="装货地详细地址" column="装货地详细地址" length="255" not-null="false" />
+    <property name="装货时间要求始" not-null="false" />
+    <property name="装货时间要求止" not-null="false" />
+    <property name="装货联系人" length="50" not-null="false" />
+    <property name="装货联系座机" length="50" not-null="false" />
+    <property name="装货联系手机" length="50" not-null="false" />
+    <property name="卸货地编号" column="卸货地" length="6" not-null="false" />
+    <property name="卸货地详细地址" column="卸货地详细地址" length="255" not-null="false" />
+    <property name="卸货时间要求始" not-null="false" />
+    <property name="卸货时间要求止" not-null="false" />
+    <property name="卸货联系人" length="50" not-null="false" />
+    <property name="卸货联系座机" length="50" not-null="false" />
+    <property name="卸货联系手机" length="50" not-null="false" />
+    <property name="备注" length="255" not-null="false" />
+    <property name="船名" length="50" not-null="false" />
+    <property name="航次" length="50" not-null="false" />
+    <property name="提示性箱号" length="12" not-null="false" />
+    <property name="提单号" length="50" not-null="false" />
+    <property name="是否拒绝" not-null="true" />
+    <property name="拒绝原因" length="100" />
+    <property name="是否已导入" not-null="false" />
+    <property name="缓急程度" not-null="true" />
+    <property name="卸货地单位编号" column="卸货地单位" length="6" not-null="false" />
+    <property name="装货地单位编号" column="装货地单位" length="6" not-null="false" />
+    <property name="CreatedBy" length="20" not-null="true" />
+    <property name="Created" not-null="true" />
+    <property name="UpdatedBy" length="20" not-null="false" />
+    <property name="Updated" not-null="false" />
+    <property name="IsActive" not-null="true" />
+    <property name="ClientId" not-null="true" />
+    <property name="OrgId" not-null="true" />
+    <many-to-one name="票" column="票" not-null="false" cascade="none" foreign-key="FK_任务_票" />
+    <many-to-one name="委托人" not-null="false" update="false" insert="false" foreign-key="FK_任务_委托人" />
+    <many-to-one name="箱型" not-null="false" update="false" insert="false" foreign-key="FK_任务_箱型" />
+    <many-to-one name="箱属船公司" not-null="false" update="false" insert="false" foreign-key="FK_任务_箱属船公司" />
+    <many-to-one name="提箱点" not-null="false" update="false" insert="false" foreign-key="FK_任务_提箱点" />
+    <many-to-one name="还箱进港点" not-null="false" update="false" insert="false" foreign-key="FK_任务_还箱进港点" />
+    <many-to-one name="专家任务" column="专家任务" not-null="false" cascade="none" foreign-key="FK_任务_专家任务" />
+    <many-to-one name="卸货地单位" not-null="false" update="false" insert="false" foreign-key="FK_任务_卸货地单位" />
+    <many-to-one name="装货地单位" not-null="false" update="false" insert="false" foreign-key="FK_任务_装货地单位" />
+  </class>
+  <class name="Zkzx.Model.作业异常情况, Zkzx.Model" table="业务作业_作业异常情况" optimistic-lock="version">
+    <id name="ID" column="Id">
+      <generator class="identity" />
+    </id>
+    <version name="Version" column="Version" type="Int32" unsaved-value="0" />
+    <property name="时间" not-null="true" />
+    <property name="异常情况" length="50" not-null="true" />
+    <property name="异常参数" length="255" not-null="false" />
+    <property name="处理状态" length="50" not-null="true" />
+    <property name="处理时间" not-null="false" />
+    <property name="处理结果" length="255" not-null="false" />
+    <property name="CreatedBy" length="20" not-null="true" />
+    <property name="Created" not-null="true" />
+    <property name="UpdatedBy" length="20" not-null="false" />
+    <property name="Updated" not-null="false" />
+    <property name="IsActive" not-null="true" />
+    <property name="ClientId" not-null="true" />
+    <property name="OrgId" not-null="true" />
+    <many-to-one name="车辆作业" not-null="true" foreign-key="FK_异常情况_车辆作业" />
+  </class>
+  <class name="Zkzx.Model.箱型, Zkzx.Model" table="参数备案_箱型" optimistic-lock="version">
+    <id name="编号" column="编号">
+      <generator class="assigned" />
+    </id>
+    <version name="Version" column="Version" type="Int32" unsaved-value="0" />
+    <property name="名称" length="10" not-null="true" unique="true" unique-key="UK_箱型_名称" />
+    <property name="中文名称" length="20" />
+    <property name="备注" length="100" />
+    <property name="CreatedBy" length="20" not-null="true" />
+    <property name="Created" not-null="true" />
+    <property name="UpdatedBy" length="20" not-null="false" />
+    <property name="Updated" not-null="false" />
+    <property name="IsActive" not-null="true" />
+    <property name="ClientId" not-null="true" />
+    <property name="OrgId" not-null="true" />
+  </class>
+  <class name="Zkzx.Model.车辆作业, Zkzx.Model" table="业务作业_车辆作业" optimistic-lock="version">
+    <id name="ID" column="Id">
+      <generator class="guid.comb" />
+    </id>
+    <version name="Version" column="Version" type="Int32" unsaved-value="0" />
+    <property name="作业号" length="14" not-null="true" />
+    <property name="驾驶员编号" column="驾驶员" length="6" not-null="false" />
+    <property name="备注" length="500" not-null="false" />
+    <property name="开始时间" not-null="false" />
+    <property name="结束时间" not-null="false" />
+    <property name="Track" not-null="false" />
+    <property name="车载Id号" column="车载Id号" length="7" not-null="false" />
+    <property name="CreatedBy" length="20" not-null="true" />
+    <property name="Created" not-null="true" />
+    <property name="UpdatedBy" length="20" not-null="false" />
+    <property name="Updated" not-null="false" />
+    <property name="IsActive" not-null="true" />
+    <property name="ClientId" not-null="true" />
+    <property name="OrgId" not-null="true" />
+    <many-to-one name="专家任务" not-null="false" foreign-key="FK_车辆作业_专家任务" />
+    <many-to-one name="车辆" not-null="true" foreign-key="FK_车辆作业_车辆" />
+    <many-to-one name="驾驶员" not-null="false" update="false" insert="false" foreign-key="FK_车辆作业_驾驶员" />
+    <one-to-one name="最新作业状态" constrained="false" />
+    <bag name="作业监控状态" inverse="true" cascade="none" order-by="时间 DESC">
+      <key column="车辆作业" />
+      <one-to-many class="Zkzx.Model.作业监控状态, Zkzx.Model" not-found="ignore" />
+    </bag>
+    <bag name="作业异常情况" inverse="true" cascade="none" order-by="时间 DESC">
+      <key column="车辆作业" />
+      <one-to-many class="Zkzx.Model.作业异常情况, Zkzx.Model" not-found="ignore" />
+    </bag>
+    <bag name="动作时间数据" inverse="true" cascade="none" order-by="时间 DESC">
+      <key column="车辆作业" />
+      <one-to-many class="Zkzx.Model.动作时间数据, Zkzx.Model" not-found="ignore" />
+    </bag>
+  </class>
+</hibernate-mapping>
